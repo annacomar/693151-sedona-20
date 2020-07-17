@@ -1,0 +1,38 @@
+/*libs*/
+// @import "../../node_modules/normalize-scss/sass/_normalize.scss";
+
+/*variables*/
+@import "base/variables.scss";
+
+/*mixins*/
+@import "base/mixins.scss";
+
+/*font-face*/
+@import "base/font-face.scss";
+
+/*body */
+@import "base/body.scss";
+
+/*global*/
+@import "global/container.scss";
+@import "global/main-nav.scss";
+@import "global/page-header.scss";
+@import "global/page-footer.scss";
+@import "global/button.scss";
+
+/*blocks*/
+@import "blocks/advantages.scss";
+@import "blocks/intro.scss";
+@import "blocks/made-by.scss";
+@import "blocks/photo.scss";
+@import "blocks/promo.scss";
+@import "blocks/search-hotel.scss";
+@import "blocks/site-list.scss";
+@import "blocks/social.scss";
+@import "blocks/catalog.scss";
+@import "blocks/video.scss";
+@import "blocks/feedback.scss";
+@import "blocks/likes.scss";
+@import "blocks/tag.scss";
+@import "blocks/map.scss";
+@import "blocks/modal.scss";

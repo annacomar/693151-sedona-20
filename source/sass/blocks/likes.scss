@@ -1,0 +1,14 @@
+.likes__title {
+  @include reset-text;
+}
+
+.likes__button {
+  width: 23px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
