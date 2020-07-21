@@ -4,14 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Фото | Седона</title>
+  <!-- TODO: добавить после лекции по графике
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <svg style="display:none">
+  <!-- TODO:  добавить после лекции по графике-->
+  <!--<svg style="display:none">
     <symbol viewBox="0 0 17.5 14.663" id="icon-twitter">
       <g id="W6EeEF_1_">
         <g>
@@ -56,21 +59,24 @@
     </symbol>
 
   </svg>
+  -->
 
   <div class="container">
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <!--main-nav- -closed, без пробела перед -closed, для закрытого меню -->
-        <a class="page-header__logo-wrapper" href ="index.html">
-          <picture>
+        <a class="page-header__logo-wrapper" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
+          <!-- TODO:  добавить после лекции по графике-->
+          <!--<picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
-          </picture>
+          </picture>-->
         </a>
         <button aria-label="Открыть меню" class="main-nav__toggle" type="button">
           <span class="visually-hidden">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982"
+            <!-- TODO:  добавить после лекции по графике-->
+            <!--<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982"
               xml:space="preserve">
               <g>
                 <rect fill="#81b3d2" width="22.928" height="3.964" />
@@ -78,7 +84,9 @@
                 <rect fill="#81b3d2" y="18.018" width="22.928" height="3.964" />
               </g>
             </svg>
-            Открыть меню</span></button>
+          -->
+            Открыть меню</span>
+        </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
@@ -100,16 +108,14 @@
     <main class="page-main">
       <section class="intro">
         <div class="intro__image-wrapper">
-          <picture>
-
-            <img class="intro__slogan" src="img/text-sedona-index.svg" alt="Слоган города Седона">
-          </picture>
+          <img class="intro__slogan" src="img/text-sedona-index.svg" alt="Слоган города Седона">
         </div>
         <div class="intro__text-wrapper intro__text-wrapper--photo">
           <h1 class="intro__title">Фото и видео</h1>
           <p class="intro__text">
             Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
           </p>
+        </div>
       </section>
 
       <section class="catalog">
@@ -117,11 +123,12 @@
 
           <li class="catalog__item catalog__item----sunset photo">
             <a href="#" class="photo__image photo__image--sunset">
-              <picture>
+              <img class="photo__picture" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+              <!-- TODO:  добавить после лекции по графике-->
+              <!--<picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
-                <img class"photo__picture" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
-              </picture>
+              </picture>-->
             </a>
             <div class="photo__wrapper">
               <h3 class="photo__title">Неродные просторы</h3>
@@ -135,11 +142,13 @@
 
           <li class="catalog__item catalog__item--cactus photo">
             <a href="#" class="photo__image photo__image--cactus">
-              <picture>
+              <img class="photo__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+              <!-- TODO:  добавить после лекции по графике-->
+              <!--<picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
-                <img class"photo__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
               </picture>
+            -->
             </a>
             <div class="photo__wrapper">
               <h3 class="photo__title">Местная растительность</h3>
@@ -153,11 +162,12 @@
 
           <li class="catalog__item catalog__item--roads photo">
             <a href="#" class="photo__image photo__image--roads">
-              <picture>
+              <img class="photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+              <!--TODO: добавить картинки после лекции по графике <picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
-                <img class"photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
               </picture>
+            -->
             </a>
             <div class="photo__wrapper">
               <h3 class="photo__title">Дорога на север
@@ -169,13 +179,16 @@
               </div>
             </div>
           </li>
+
           <li class="catalog__item catalog__item--bridge photo">
             <a href="#" class="photo__image photo__image--bridge">
-              <picture>
+              <img class="photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+              <!-- TODO: добавить картинки после лекции по графике -->
+              <!--<picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
-                <img class"photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
               </picture>
+            -->
             </a>
             <div class="photo__wrapper">
               <h3 class="photo__title">Мост дьявола
@@ -192,36 +205,44 @@
 
       <section class="video">
         <h3 class="visually-hidden">Видеопрезентация Седоны</h3>
-        <div class="video__title--wrapper">
-          <b class="video__title">Все ещё сомневаетесь?</b>
+        <div class="video__title-wrapper">
+          <b class="video__title--text">Все ещё сомневаетесь?</b>
           <p class="video__argument">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
         </div>
 
         <div class="video__wrapper">
+          <img class="video__image" src="img/video-mobile@1x.jpg" alt="Видеопрезентация Седоны">
+          <!-- TODO:  добавить картинки после лекции по графике
           <picture class="video__picture">
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
-            <img class"video__image" src="img/video-mobile@1x.jpg" alt="Видеопрезентация Седоны">
           </picture>
+          -->
           <div class="video__scroller">
             <button aria-label="Промотать видео вперед или назад" class="video__scroller video__scroller--button" type="button"></button>
           </div>
           <div class="video__interface">
             <button class="video__button video__button--replay" type="button" aria-label="Просмотреть снова">
               <svg class="video_icon video_icon--replay" width="16" height="20">
+                <!-- TODO:  добавить картинки после лекции по графике
                 <use xlink:href="#video-replay"></use>
+                -->
               </svg>
             </button>
             <button class="video__button video__button--subtitles" type="button" aria-label="Включить субтитры">
               <svg class="video_icon video_icon--subtitles" width="32" height="20">
+                <!-- TODO:  добавить картинки после лекции по графике
                 <use xlink:href="#video-subtitles"></use>
+                -->
               </svg>
             </button>
             <button class="video__button video__button--fullscreen" type="button" aria-label="На полный экран">
               <svg class="video_icon video_icon--fullscreen" width="20" height="20">
+                <!-- TODO: добавить картинки после лекции по графике
                 <use xlink:href="#video-fullscreen"></use>
+                -->
               </svg>
             </button>
           </div>
@@ -239,21 +260,27 @@
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="Седона в Твиттере">
                 <svg class="social__icon social__icon--twitter" width="18" height="14">
+                  <!-- TODO: добавить картинки после лекции по графике
                   <use xlink:href="#icon-twitter"></use>
+                  -->
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Седона в Фейсбуке">
                 <svg class="social__icon social__icon--facebook" width="9" height="18">
+                  <!-- TODO:  добавить картинки после лекции по графике
                   <use xlink:href="#icon-facebook"></use>
+                  -->
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Седона в Ютюбе">
                 <svg class="social__icon social__icon--youtube" width="20" height="14">
+                  <!-- TODO:  добавить после лекции по графике, проверить адрес svg
                   <use xlink:href="#icon-youtube"></use>
+                  -->
                 </svg>
               </a>
             </li>
@@ -264,7 +291,8 @@
           <b class="made-by__title">Разработано</b>
           <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="made-by__icon" width="27" height="34">
-              <use xlink:href="#logo-htmlacademy"></use>
+              <!-- TODO: добавить после лекции по графике, проверить адрес svg
+              <use xlink:href="#logo-htmlacademy"></use> -->
             </svg>
           </a>
         </div>
@@ -272,6 +300,7 @@
     </footer>
   </div>
 
+  <!-- TODO:  добавить после лекции, где рассматривается меню на JS
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
@@ -287,6 +316,7 @@
       }
     });
   </script>
+  -->
 
 </body>
 
