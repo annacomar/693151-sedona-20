@@ -1,0 +1,90 @@
+.photo__image {
+  display: block;
+  width: 100%;
+  padding: 20px 22px;
+  height: 280px;
+}
+
+.photo__title {
+  @include reset-text;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.photo__author {
+  @include reset-text;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  color: #333333;
+}
+
+.photo__likes {
+  @include reset-text;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+}
+
+.photo__wrapper {
+  margin-left: 20px;
+  margin-right: 120px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+@media (min-width: $tablet-width) {
+  .photo__image {
+    &--sunset {
+      width: 100%;
+      height: 400px;
+    }
+
+    &--bridge,
+    &--cactus,
+    &--roads {
+      width: 324px;
+      height: 267px;
+    }
+  }
+
+  .photo__wrapper {
+    display: flex;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    justify-content: space-between;
+    background-color: $white-greyish;
+  }
+
+  .photo__wrapper:nth-child(3) {
+    background-color: $lightgrey;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__wrapper {
+    display: flex;
+    /*transparent?? captions on the photo???*/
+  }
+
+  .photo__image {
+    &--sunset {
+      width: 1200px;
+      height: 400px;
+    }
+
+    &--bridge,
+    &--cactus,
+    &--roads {
+      width: 400px;
+      height: 267px;
+    }
+  }
+}

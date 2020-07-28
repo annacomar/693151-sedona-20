@@ -1,0 +1,83 @@
+.modal__window {
+  //display: none;
+  position: fixed;
+  color: $lighterblack;
+  background-color: $white;
+  width: 320px;
+
+  &--not-sent {
+    padding: 46px 57px 35px 56px;
+    top: -20px;
+    left: 82px;
+  }
+
+  &--sent {
+    padding-top: 49px;
+    padding-right: 54px;
+    padding-left: 52px;
+  }
+}
+
+.modal__wrapper {
+  &--not-sent {
+    width: 207px;
+    margin: 0 auto;
+    font-style: inherit;
+  }
+
+  &--sent {
+    width: 214px;
+    margin: 0 auto;
+  }
+}
+
+.modal__title {
+  @include reset-text;
+  margin-bottom: 30px;
+  color: $darkblack;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  font-style: inherit;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  @include reset-text;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--not-sent {
+    margin-bottom: 29px;
+  }
+
+  &--sent {
+    margin-bottom: 38px;
+  }
+}
+
+.modal__button-wrapper {
+  &--not-sent {
+    width: 180px;
+    padding-left: 78px;
+    padding-top: 22px;
+    padding-right: 79px;
+    padding-bottom: 22px;
+  }
+
+  &--sent {
+    width: 280px;
+    padding: 20px 20px 20px 20px;
+    background-color: $white-greyish;
+  }
+}
+
+.modal__button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
