@@ -134,12 +134,6 @@
 .feedback__input {
   min-width: 150px;
   flex-grow: 1;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 26px;
-  text-align: left;
-  color: $darkblack;
   border: none;
 
   &--grey {
@@ -210,6 +204,15 @@
       background-position: center;
     }
   }
+}
+
+.feedback__input::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 26px;
+  text-align: left;
+  color: $darkblack;
 }
 
 .feedback__button {
