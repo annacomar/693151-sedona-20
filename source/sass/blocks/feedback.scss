@@ -7,7 +7,7 @@
 .feedback__wrapper {
   @include reset-text;
   display: flex;
-  align-items: center;
+  //xsalign-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 
@@ -399,6 +399,8 @@
   }
 
   .feedback__input {
+    flex-grow: 0;
+
     &--describe-more {
       width: 960px;
       margin: 0 auto;
