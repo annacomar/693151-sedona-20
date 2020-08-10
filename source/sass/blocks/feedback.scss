@@ -1,13 +1,12 @@
 .feedback {
   @include reset-fieldset;
-  margin: 0 auto 47px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .feedback__wrapper {
   @include reset-text;
   display: flex;
-  //xsalign-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 
@@ -19,6 +18,11 @@
 
 .feedback__list {
   @include reset-list;
+
+  &--radio li,
+  &--checkbox li {
+    display: flex;
+  }
 }
 
 .feedback__fieldset {
@@ -132,7 +136,6 @@
 }
 
 .feedback__input {
-  min-width: 150px;
   flex-grow: 1;
   border: none;
 
@@ -242,7 +245,6 @@
 @media (min-width: $tablet-width) {
   .feedback {
     margin-bottom: 61px;
-    padding-top: 84px;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -301,6 +303,7 @@
     &--your-impressions {
       margin-bottom: 67px;
       width: 100%;
+      padding-top: 0;
     }
 
     &--contact-information {
@@ -332,10 +335,11 @@
 
 @media (min-width: $desktop-width) {
   .feedback {
+    margin-left: 120px;
+    margin-right: 120px;
     margin-bottom: 66px;
-    padding-top: 70px;
-    padding-left: 129px;
-    padding-right: 120px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .feedback__fieldset {
@@ -343,19 +347,12 @@
     display: flex;
     flex-wrap: wrap;
     order: 2;
-    width: 386px;
 
     &--your-impressions {
       order: 1;
-      width: 386px;
-    }
-
-    &--contact-information {
-      width: 960px;
     }
 
     &--sightseengs-visited {
-      width: 960px;
       display: flex;
       flex-wrap: wrap;
     }
@@ -398,8 +395,18 @@
     }
   }
 
+  .feedback__contacts-wrapper {
+    display: flex;
+  }
+
+  .feedback__wrapper {
+    &--contacts {
+      width: 50%;
+    }
+  }
+
   .feedback__input {
-    flex-grow: 0;
+    flex-grow: initial;
 
     &--describe-more {
       width: 960px;

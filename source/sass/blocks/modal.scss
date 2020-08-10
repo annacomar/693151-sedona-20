@@ -1,14 +1,16 @@
 .modal__window {
-  //display: none;
-  position: fixed;
+  display: none;
+  //display: flex;
+  margin: auto;
+  //position: fixed;
   color: $lighterblack;
   background-color: $white;
   width: 320px;
 
   &--not-sent {
     padding: 46px 57px 35px 56px;
-    top: -20px;
-    left: 82px;
+    //top: -20px;
+    //left: 82px;
   }
 
   &--sent {
@@ -21,13 +23,13 @@
 .modal__wrapper {
   &--not-sent {
     width: 207px;
-    margin: 0 auto;
+    margin: auto;
     font-style: inherit;
   }
 
   &--sent {
     width: 214px;
-    margin: 0 auto;
+    margin: auto;
   }
 }
 
@@ -79,5 +81,5 @@
 .modal__button {
   display: inline-block;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
 }

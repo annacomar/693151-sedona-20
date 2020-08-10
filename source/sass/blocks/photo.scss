@@ -57,6 +57,7 @@
 
   .photo__wrapper {
     display: flex;
+    flex-direction: column;
     padding-top: 22px;
     padding-bottom: 21px;
     justify-content: space-between;
