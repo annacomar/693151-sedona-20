@@ -50,9 +50,6 @@
 }
 
 .advantages__text-wrapper {
-  display: flex;
-  flex-direction: column;
-
   &--real-city {
     padding: 61px 27px 45px 28px;
   }
@@ -62,11 +59,6 @@
   &--souvenirs {
     width: 210px;
     margin-left: 47px;
-    margin-top: -28px;
-  }
-
-  &--housing {
-    margin-bottom: 39px;
   }
 
   &--souvenirs {
@@ -165,11 +157,8 @@
   .advantages__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-left: 51px;
     padding-top: 60px;
-    padding-right: 46px;
     padding-bottom: 0;
-    min-height: 330px;
 
     &--housing {
       width: 155px;
@@ -205,14 +194,28 @@
     padding: 0;
     width: 33.33%;
 
-    &--inversed-order {
-      margin: 46px 47px;
-      order: 2;
-    }
-
     &--real-city {
       margin: 46px 47px;
       text-align: center;
+    }
+
+    &--housing {
+      width: 186px;
+    }
+
+    &--souvenirs {
+      width: 195px;
+      order: 2;
+    }
+
+    &--food {
+      width: 181px;
+    }
+
+
+    &--inversed-order {
+      margin: 46px 47px;
+      order: 2;
     }
   }
 
@@ -305,5 +308,17 @@
 
   .advantages__text-wrapper {
     margin: 53px 67px 61px;
+
+    &--housing {
+      width: 283px;
+    }
+
+    &--food {
+      width: 314px;
+    }
+
+    &--souvenirs {
+      width: 245px;
+    }
   }
 }
