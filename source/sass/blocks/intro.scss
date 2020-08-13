@@ -43,6 +43,11 @@
   &--form {
     padding-bottom: 22px;
   }
+
+  &--photo {
+    width: 290px;
+    padding-bottom: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -74,6 +79,10 @@
     width: 439px;
     margin: 0 auto;
   }
+
+  &--photo {
+    width: 450px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -85,5 +94,9 @@
   .intro__text-wrapper {
     padding-top: 113px;
     margin: 0 auto 77px;
+
+    &--photo {
+      width: 460px;
+    }
   }
 }

@@ -1,11 +1,12 @@
-.video__title--wrapper {
-  margin: 0 auto;
-  padding-top: 39px;
-  padding-bottom: 40px;
+.video__title-wrapper {
+  width: 267px;
+  margin: 0 auto 33px;
 }
 
 .video__title-text {
   @include reset-text;
+  display: block;
+  margin-top: 32px;
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 26px;
@@ -66,6 +67,7 @@
 
 @media (min-width: $tablet-width) {
   .video__title-wrapper {
+    width: 445px;
     margin: 0 auto;
     padding-top: 68px;
     padding-bottom: 78px;
@@ -89,7 +91,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .video__title--wrapper {
+  .video__title-wrapper {
     margin: 0 auto;
     padding-top: 72px;
     padding-bottom: 76px;
