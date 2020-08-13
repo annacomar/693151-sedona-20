@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title> Форма отзыва | Седона</title>
-  <!--<meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -60,12 +60,11 @@
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <!--main-nav- -closed, без пробела перед -closed, для закрытого меню -->
         <a class="page-header__logo-wrapper" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
-          <!--<picture>
+          <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
           </picture>
-        -->
         </a>
         <button aria-label="Открыть меню" class="main-nav__toggle" type="button">
           <span class="visually-hidden">
@@ -136,16 +135,14 @@
             <legend class="feedback__title feedback__title--contact-information">Контактная информация:</legend>
             <div class="feedback__contacts-wrapper">
               <p class="feedback__wrapper feedback__wrapper--contacts">
-                <label class="feedback__label feedback__label--tel" for="tel">Контактный телефон*:</label>
+                <label class="feedback__label feedback__label--tel" for="tel"><span class="desktop-hidden">Контактный</span> телефон*:</label>
                 <input class="feedback__input feedback__input--grey feedback__input--tel" id="tel" type="tel" name="tel" value="" placeholder="Введите телефон">
               </p>
-            </div>
-            <!--<p class=feedback__icon-wrapper>
+              <!--<p class=feedback__icon-wrapper>
               <svg class="feedback__icon feedback__icon--phone" width="18" height="18">
                 <!--<use xlink:href="#icon-phone">-->
-            <!--</svg>
+              <!--</svg>
             </p>-->
-            <div class="feedback__contacts-wrapper">
               <p class="feedback__wrapper feedback__wrapper--contacts">
                 <label class="feedback__label feedback__label--email" for="email">Электронная почта*:</label>
                 <input class="feedback__input feedback__input--grey feedback__input--email" id="email" type="email" name="email" value="" placeholder="Введите e-mail">
@@ -194,8 +191,9 @@
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--your-emotions">
             <legend class="feedback__title feedback__title--your-emotions">Опишите свои эмоции:</legend>
-            <input class="feedback__input feedback__input--grey feedback__input--describe-more" id="emotions" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги">
-            </input>
+            <label class="visually-hidden">Ваши впечатления</label>
+            <textarea class="feedback__input feedback__input--grey feedback__input--describe-more" id="emotions" name="emotions" placeholder="Опишите подробно все свои восторги">
+            </textarea>
           </fieldset>
           <button class="feedback__button button button--blue" type="submit">Отправить отзыв</button>
         </form>

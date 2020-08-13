@@ -33,7 +33,7 @@
   color: #000000;
 }
 
-.photo__wrapper {
+.photo__info-wrapper {
   margin-left: 20px;
   margin-right: 120px;
   padding-top: 22px;
@@ -42,7 +42,7 @@
 
 @media (min-width: $tablet-width) {
   .photo__image {
-    &--sunset {
+    &--promo {
       width: 100%;
       height: 400px;
     }
@@ -55,7 +55,7 @@
     }
   }
 
-  .photo__wrapper {
+  .photo__info-wrapper {
     display: flex;
     flex-direction: column;
     padding-top: 22px;
@@ -64,19 +64,21 @@
     background-color: $white-greyish;
   }
 
-  .photo__wrapper:nth-child(3) {
+  .photo__info-wrapper:nth-child(3) {
     background-color: $lightgrey;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .photo__wrapper {
+  .photo__info-wrapper {
     display: flex;
-    /*transparent?? captions on the photo???*/
+    margin: 0;
   }
 
   .photo__image {
-    &--sunset {
+    padding: 0;
+
+    &--promo {
       width: 1200px;
       height: 400px;
     }

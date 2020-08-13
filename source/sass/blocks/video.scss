@@ -4,7 +4,7 @@
   padding-bottom: 40px;
 }
 
-.video__title {
+.video__title-text {
   @include reset-text;
   margin-bottom: 30px;
   font-size: 18px;
@@ -65,10 +65,14 @@
 }
 
 @media (min-width: $tablet-width) {
-  .video__title--wrapper {
+  .video__title-wrapper {
     margin: 0 auto;
     padding-top: 68px;
     padding-bottom: 78px;
+  }
+
+  .video__title-text {
+    font-size: 30px;
   }
 
   .video__wrapper {

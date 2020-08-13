@@ -4,10 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Фото | Седона</title>
-  <!-- TODO: добавить после лекции по графике
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -66,12 +64,11 @@
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <!--main-nav- -closed, без пробела перед -closed, для закрытого меню -->
         <a class="page-header__logo-wrapper" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
-          <!-- TODO:  добавить после лекции по графике-->
-          <!--<picture>
+          <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          </picture>-->
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
+          </picture>
         </a>
         <button aria-label="Открыть меню" class="main-nav__toggle" type="button">
           <span class="visually-hidden">
@@ -122,91 +119,96 @@
       <section class="catalog">
         <ul class="catalog__list">
 
-          <li class="catalog__item catalog__item----sunset photo">
-            <a href="#" class="photo__image photo__image--sunset">
-              <img class="photo__picture" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
-              <!-- TODO:  добавить после лекции по графике-->
-              <!--<picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
-              </picture>-->
+          <li class="catalog__item catalog__item--promo photo">
+            <a href="#" class="photo__image photo__image--promo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                <img class="photo__picture" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
+              </picture>
             </a>
-            <div class="photo__wrapper">
+            <section class="photo__info-wrapper">
               <h2 class="photo__title">Неродные просторы</h2>
               <p class="photo__author">Автор фото: Борис</p>
               <div class="photo__likes likes">
                 <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
                 <b class="photo__likes likes__title">1350</b>
               </div>
-            </div>
+            </section>
           </li>
 
-          <li class="catalog__item catalog__item--cactus photo">
-            <a href="#" class="photo__image photo__image--cactus">
-              <img class="photo__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
-              <!-- TODO:  добавить после лекции по графике-->
-              <!--<picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
-              </picture>
-            -->
-            </a>
-            <div class="photo__wrapper">
-              <h2 class="photo__title">Местная растительность</h2>
-              <p class="photo__author">Автор фото: Сергей</p>
-              <div class="photo__likes likes">
-                <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
-                <b class="photo__likes likes__title">143</b>
-              </div>
-            </div>
+          <li>
+            <ul class="catalog__sublist">
+              <li class="catalog__subitem photo">
+                <a href="#" class="photo__image photo__image--cactus">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                    <img class="photo__picture" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
+                  </picture>
+                </a>
+                <section class="photo__info-wrapper">
+                  <h2 class="photo__title">Местная растительность</h2>
+                  <p class="photo__author">Автор фото: Сергей</p>
+                  <div class="photo__likes likes">
+                    <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
+                    <b class="photo__likes likes__title">143</b>
+                  </div>
+                </section>
+              </li>
+
+              <li class="catalog__subitem photo">
+                <a href="#" class="photo__image photo__image--roads">
+                  <img class="photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+                  <!--TODO: добавить картинки после лекции по графике <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
+                  </picture>
+                -->
+                </a>
+                <section class="photo__info-wrapper">
+                  <h2 class="photo__title">Дорога на север</h2>
+                  <p class="photo__author">Автор фото: Петр</p>
+                  <div class="photo__likes likes">
+                    <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
+                    <b class="photo__likes likes__title">96</b>
+                  </div>
+                </section>
+              </li>
+
+              <li class="catalog__subitem photo">
+                <a href="#" class="photo__image photo__image--bridge">
+                  <img class="photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+                  <!-- TODO: добавить картинки после лекции по графике -->
+                  <!--<picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
+                  </picture>
+                -->
+                </a>
+                <section class="photo__info-wrapper">
+                  <h2 class="photo__title">Мост дьявола
+                  </h2>
+                  <p class="photo__author">Автор фото: Антон</p>
+                  <div class="photo__likes likes">
+                    <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
+                    <b class="photo__likes likes__title">254</b>
+                  </div>
+                </section>
+              </li>
+
+            </ul>
           </li>
 
-          <li class="catalog__item catalog__item--roads photo">
-            <a href="#" class="photo__image photo__image--roads">
-              <img class="photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
-              <!--TODO: добавить картинки после лекции по графике <picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
-              </picture>
-            -->
-            </a>
-            <div class="photo__wrapper">
-              <h2 class="photo__title">Дорога на север</h2>
-              <p class="photo__author">Автор фото: Петр</p>
-              <div class="photo__likes likes">
-                <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
-                <b class="photo__likes likes__title">96</b>
-              </div>
-            </div>
-          </li>
 
-          <li class="catalog__item catalog__item--bridge photo">
-            <a href="#" class="photo__image photo__image--bridge">
-              <img class="photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
-              <!-- TODO: добавить картинки после лекции по графике -->
-              <!--<picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
-              </picture>
-            -->
-            </a>
-            <div class="photo__wrapper">
-              <h2 class="photo__title">Мост дьявола
-              </h2>
-              <p class="photo__author">Автор фото: Антон</p>
-              <div class="photo__likes likes">
-                <button class="photo__likes likes__button" type="button" aria-label="Поставить лайк"></button>
-                <b class="photo__likes likes__title">254</b>
-              </div>
-            </div>
-          </li>
+
         </ul>
       </section>
 
       <section class="video">
         <h2 class="visually-hidden">Видеопрезентация Седоны</h2>
         <div class="video__title-wrapper">
-          <b class="video__title--text">Все ещё сомневаетесь?</b>
+          <b class="video__title-text">Все ещё сомневаетесь?</b>
           <p class="video__argument">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>

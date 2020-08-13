@@ -1,9 +1,6 @@
 .advantages__wrapper {
   margin: 0;
-  padding-left: 18px;
-  padding-top: 26px;
-  padding-right: 41px;
-  padding-bottom: 42px;
+  padding: 26px 41px 42px 18px;
   background: $white;
 }
 
@@ -66,10 +63,7 @@
   }
 
   &--inversed-order {
-    padding-left: 30px;
-    padding-top: 45px;
-    padding-right: 31px;
-    padding-bottom: 42px;
+    padding: 45px 31px 42px 30px;
   }
 }
 
@@ -102,7 +96,6 @@
 
 .advantages__argument,
 .advantages__number {
-  @include reset-text;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -157,8 +150,7 @@
   .advantages__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 0;
+    padding: 60px 0 0;
 
     &--housing {
       width: 155px;
@@ -212,7 +204,6 @@
       width: 181px;
     }
 
-
     &--inversed-order {
       margin: 46px 47px;
       order: 2;
@@ -255,6 +246,10 @@
       display: flex;
       flex-direction: column;
     }
+
+    &--souvenirs {
+      order: 1;
+    }
   }
 
   .advantages__icon {
@@ -284,10 +279,15 @@
       display: flex;
       margin-right: 130px;
     }
+
+    &--food,
+    &--housing,
+    &--souvenirs {
+      width: 400px;
+    }
   }
 
   .advantages__title {
-    @include reset-text;
     text-align: center;
 
     &--food,
@@ -303,22 +303,6 @@
     &--housing,
     &--souvenirs {
       text-align: center;
-    }
-  }
-
-  .advantages__text-wrapper {
-    margin: 53px 67px 61px;
-
-    &--housing {
-      width: 283px;
-    }
-
-    &--food {
-      width: 314px;
-    }
-
-    &--souvenirs {
-      width: 245px;
     }
   }
 }

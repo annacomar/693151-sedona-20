@@ -9,6 +9,10 @@
   border-bottom: solid #f2f2f2 1px;
 }
 
+.catalog__sublist {
+  @include reset-list;
+}
+
 @media (min-width: $tablet-width) {
   .catalog__list {
     display: flex;
@@ -20,10 +24,13 @@
     width: 100%;
   }
 
-  &--cactus,
-  &--roads,
-  &--bridge {
-    width: 324px;
+  .catalog__subitem {
+    width: 50%;
+  }
+
+  .catalog__sublist {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -34,11 +41,12 @@
 
   .catalog__item {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
 
-  &--cactus,
-  &--roads,
-  &--bridge {
+  .catalog__subitem {
     width: 400px;
   }
 }

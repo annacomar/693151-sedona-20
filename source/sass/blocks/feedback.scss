@@ -7,7 +7,6 @@
 .feedback__wrapper {
   @include reset-text;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
 
   &--contacts {
@@ -19,9 +18,17 @@
 .feedback__list {
   @include reset-list;
 
-  &--radio li,
-  &--checkbox li {
+  &--checkbox {
     display: flex;
+  }
+
+  &--checkbox li,
+  &--radio li {
+    display: flex;
+  }
+
+  &--checkbox li {
+    width: 25%;
   }
 }
 
@@ -30,7 +37,7 @@
   padding-bottom: 25px;
 
   &--name-surname-patronymic {
-    border-bottom: solid #f2f2f2 1px;
+    border-bottom: solid $white-greyish 1px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -40,7 +47,7 @@
     padding-bottom: 28px;
     margin-left: 20px;
     margin-right: 20px;
-    border-bottom: solid #f2f2f2 1px;
+    border-bottom: solid $white-greyish 1px;
   }
 
   &--your-impressions {
@@ -48,7 +55,7 @@
     padding-bottom: 26px;
     margin-left: 23px;
     margin-right: 37px;
-    border-bottom: solid #f2f2f2 1px;
+    border-bottom: solid $white-greyish 1px;
   }
 
   &--sightseengs-visited {
@@ -56,7 +63,7 @@
     padding-bottom: 24px;
     margin-left: 22px;
     margin-right: 41px;
-    border-bottom: solid #f2f2f2 1px;
+    border-bottom: solid $white-greyish 1px;
   }
 
   &--your-emotions {
@@ -136,16 +143,21 @@
 }
 
 .feedback__input {
-  flex-grow: 1;
   border: none;
+
+  &--name,
+  &--patronymic,
+  &--surname {
+    flex-grow: 1;
+  }
 
   &--grey {
     height: 58px;
     background-color: $white-greyish;
   }
 
-  &--tel,
-  &--email {
+  &--email,
+  &--tel {
     padding-left: 22px;
     padding-right: 64px;
   }
@@ -231,10 +243,7 @@
 
 .feedback__icon-wrapper {
   position: absolute;
-  padding-top: 20px;
-  padding-right: 19px;
-  padding-bottom: 20px;
-  padding-left: 21px;
+  padding: 20px 19px 20px 21px;
   top: 180%;
   left: 62%;
   width: 58px;
@@ -269,6 +278,7 @@
     &--your-impressions {
       order: 1;
       width: 50%;
+      border-right: solid $white-greyish 1px;
     }
 
     &--contact-information {
@@ -279,8 +289,8 @@
     &--sightseengs-visited {
       order: 4;
       width: 648px;
-      display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
     &--your-emotions {
@@ -350,11 +360,17 @@
 
     &--your-impressions {
       order: 1;
+      border-right: solid $white-greyish 1px;
+    }
+
+    &--name-surname-patronymic {
+      padding-left: 78px;
     }
 
     &--sightseengs-visited {
       display: flex;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     &--your-emotions {
@@ -395,32 +411,59 @@
     }
   }
 
-  .feedback__contacts-wrapper {
-    display: flex;
-  }
+  .feedback__label {
+    &--tel {
+      width: 70px;
+    }
 
-  .feedback__wrapper {
-    &--contacts {
-      width: 50%;
+    &--email {
+      width: 147px;
     }
   }
 
   .feedback__input {
     flex-grow: initial;
 
+    &--name {
+      width: 350px;
+    }
+
+    &--surname {
+      width: 312px;
+    }
+
+    &--patronymic {
+      width: 314px;
+    }
+
     &--describe-more {
       width: 960px;
-      margin: 0 auto;
-      margin-bottom: 58px;
+      margin: 0 auto 58px;
     }
+
+    &--email,
+    &--tel {
+      width: 257px;
+    }
+  }
+
+  .feedback__wrapper {
+    &--contacts {
+      width: 50%;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .feedback__contacts-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 960px;
   }
 
   .feedback__button {
     width: 480px;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    padding-left: 148px;
-    padding-right: 147px;
+    padding: 21px 147px 21px 148px;
     margin-right: 470px;
     font-size: 21px;
   }
