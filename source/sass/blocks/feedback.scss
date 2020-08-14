@@ -265,7 +265,6 @@
   }
 
   .feedback__fieldset {
-    @include reset-fieldset;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

@@ -1,8 +1,14 @@
 .photo__image {
   display: block;
+  margin-bottom: 10px;
   width: 100%;
-  padding: 20px 22px;
   height: 280px;
+}
+
+.photo__info-wrapper {
+  padding-bottom: 23px;
+  margin-bottom: 20px;
+  border-bottom: solid #f2f2f2 1px;
 }
 
 .photo__title {
@@ -17,8 +23,9 @@
 
 .photo__author {
   @include reset-text;
+  margin-bottom: 10px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 24px;
   text-align: left;
   color: #333333;
@@ -33,18 +40,14 @@
   color: #000000;
 }
 
-.photo__info-wrapper {
-  margin-left: 20px;
-  margin-right: 120px;
-  padding-top: 22px;
-  padding-bottom: 23px;
-}
-
 @media (min-width: $tablet-width) {
   .photo__image {
+    margin-bottom: 0;
+
     &--promo {
       width: 100%;
       height: 400px;
+      text-align: center;
     }
 
     &--bridge,
@@ -57,22 +60,51 @@
 
   .photo__info-wrapper {
     display: flex;
-    flex-direction: column;
+    width: 324px;
     padding-top: 22px;
     padding-bottom: 21px;
     justify-content: space-between;
     background-color: $white-greyish;
+
+    &--sunset {
+      width: 648px;
+      margin: 0 auto;
+    }
+
+    &--roads {
+      background-color: $lightgrey;
+    }
   }
 
-  .photo__info-wrapper:nth-child(3) {
-    background-color: $lightgrey;
+  .photo__caption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  .photo__likes {
+    margin-right: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .photo {
+    position: relative;
+  }
+
   .photo__info-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
     margin: 0;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &--sunset {
+      width: 1200px;
+    }
   }
 
   .photo__image {
@@ -89,5 +121,12 @@
       width: 400px;
       height: 267px;
     }
+  }
+
+  .photo__author,
+  .photo__likes,
+  .photo__title {
+    color: $white;
+    opacity: 1;
   }
 }
