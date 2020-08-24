@@ -8,14 +8,28 @@
   width: 100%;
   height: 389px;
   margin: 0 auto;
+  overflow: hidden;
 
   background-color: $lightblue;
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
     background-size: 320px auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -25%;
+    width: 768px;
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -59,15 +73,24 @@
   .promo__wrapper {
     width: 100%;
     height: 518px;
-    object-fit: contain;
+    position: relative;
 
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
 
-    //@media (min-resolution: $retina-dppx) {
-    //background-image: url("../img/bg-back-tablet@2x.jpg");
-    //background-size: 1338px auto;
-    //}
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -65%;
+      width: 1200px;
+      height: 57px;
+    }
   }
 
   .promo__text {

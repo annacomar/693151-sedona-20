@@ -6,6 +6,10 @@
   background-color: $lightblue;
 }
 
+.main-nav--closed {
+  background-color: $white;
+}
+
 .main-nav__list {
   @include reset-list;
 }
@@ -21,31 +25,39 @@
   height: 50px;
 
   background-color: transparent;
+  outline: none;
 
   cursor: pointer;
   border: none;
 
-  &:active,
+  &:active {
+    opacity: 0.3;
+  }
+
   &:hover {
-    background-color: $lightblue;
+    opacity: 0.6;
   }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
-  //position: absolute;
+  position: absolute;
   top: 15px;
   left: 17px;
 
-  width: 36px;
-  height: 2px;
-  background-color: $white;
+  width: 23px;
+  height: 4px;
+  background-color: $lightblue;
   box-shadow: 0 8px 0 0 $lightblue, 0 16px 0 0 $lightblue;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: $white;
+  background-color: $lightblue;
   box-shadow: 0 8px 0 0 $lightblue, 0 16px 0 0 $lightblue;
+}
+
+.main-nav--opened {
+  background-color: $lightblue;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -61,8 +73,8 @@
     top: 24px;
     left: 18px;
 
-    width: 36px;
-    height: 2px;
+    width: 22px;
+    height: 4px;
     background-color: $white;
   }
 
@@ -76,7 +88,7 @@
 
   &:active::after,
   &:active::before {
-    background-color: $lightblue;
+    background-color: $white;
   }
 }
 

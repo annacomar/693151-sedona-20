@@ -46,8 +46,18 @@
 
 .video__scroller {
   display: block;
+  margin: 0 auto;
+  padding: 17px 23px 15px 22px;
   text-align: center;
   width: 280px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &--input {
+    width: 235px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+  }
 }
 
 .video__button {
@@ -90,15 +100,26 @@
   }
 
   .video__wrapper {
+    position: relative;
     width: 648px;
     height: 499px;
   }
 
+  .video__scroller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   .video__interface {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 648px;
     height: 93px;
-    opacity: 0.6;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

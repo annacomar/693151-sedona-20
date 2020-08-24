@@ -20,6 +20,7 @@
 
   &--checkbox {
     display: flex;
+    flex-direction: column;
   }
 
   &--checkbox li,
@@ -28,7 +29,7 @@
   }
 
   &--checkbox li {
-    width: 25%;
+    width: 100%;
   }
 }
 
@@ -262,6 +263,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .feedback__list {
+    &--checkbox {
+      flex-direction: row;
+    }
   }
 
   .feedback__fieldset {

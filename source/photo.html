@@ -70,7 +70,7 @@
             <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона">
           </picture>
         </a>
-        <button aria-label="Открыть меню" class="main-nav__toggle" type="button">
+        <button aria-label="Открыть меню" class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--closed" type="button">
           <span class="visually-hidden">
             <!-- TODO:  добавить после лекции по графике-->
             <!--<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982"
@@ -224,7 +224,7 @@
             </picture>
           </a>
           <div class="video__scroller">
-            <button aria-label="Промотать видео вперед или назад" class="video__scroller video__scroller--button" type="button"></button>
+            <input aria-label="Промотать видео вперед или назад" class="video__scroller video__scroller--input" type="range">
           </div>
           <div class="video__interface">
             <button class="video__button video__button--replay" type="button" aria-label="Просмотреть снова">
@@ -303,7 +303,6 @@
     </footer>
   </div>
 
-  <!-- TODO:  добавить после лекции, где рассматривается меню на JS
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
@@ -319,7 +318,6 @@
       }
     });
   </script>
-  -->
 
 </body>
 

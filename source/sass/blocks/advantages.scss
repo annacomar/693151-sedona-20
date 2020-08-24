@@ -12,10 +12,6 @@
   &--grey {
     background-color: $grey;
   }
-
-  &--sub {
-    min-height: 416px;
-  }
 }
 
 .advantages__item {
@@ -29,12 +25,15 @@
   }
 
   &--grey {
-    padding-top: 40px;
     margin: 33px auto 32px;
     width: 246px;
     background-color: #e6e6e6;
     border-bottom: 1px solid rgba(51, 0, 0, 0.1);
   }
+}
+
+.advantages__image {
+  display: block;
 }
 
 .advantages__icon {
@@ -177,7 +176,6 @@
 
   .advantages__list {
     &--sub {
-      min-height: 256px;
       flex-direction: row;
     }
   }
@@ -226,7 +224,7 @@
   .advantages__image {
     height: 256px;
     width: 100%;
-    //object-fit: contain;
+    display: inline-block;
   }
 
   .advantages__item {
