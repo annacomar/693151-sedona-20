@@ -10,7 +10,8 @@
 
 .page-header__logo-wrapper {
   position: absolute;
-  top: 100%;
+  z-index: 10;
+  top: 0;
   left: 35%;
 }
 
@@ -22,7 +23,8 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo-wrapper {
-    left: 40%;
+    left: 45%;
+    top: 0;
   }
 
   .page-header__logo-image {
@@ -34,7 +36,7 @@
 
 @media (min-width: $desktop-width) {
   .page-header__logo-wrapper {
-    left: 65%;
+    left: 40%;
   }
 
   .page-header__logo-image {

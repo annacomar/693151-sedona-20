@@ -50,19 +50,63 @@
     padding: 61px 27px 45px 28px;
   }
 
-  &--food,
-  &--housing,
-  &--souvenirs {
+  &--housing {
+    position: relative;
     width: 210px;
     margin-left: 47px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -48px;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 37px;
+      background-image: url("../img/icon-house.svg");
+      background-size: 40px 37px;
+    }
+  }
+
+  &--food {
+    position: relative;
+    width: 210px;
+    margin-left: 47px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -48px;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 37px;
+      background-image: url("../img/icon-burger.svg");
+      background-size: 40px 37px;
+    }
   }
 
   &--souvenirs {
+    position: relative;
+    width: 210px;
+    margin-left: 47px;
     margin-bottom: 38px;
-  }
 
-  &--inversed-order {
-    padding: 45px 31px 42px 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -48px;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 38px;
+      background-image: url("../img/icon-gift.svg");
+      background-size: 32px 38px;
+    }
+
+    &--inversed-order {
+      padding: 45px 31px 42px 30px;
+    }
   }
 }
 
@@ -83,7 +127,6 @@
   &--food,
   &--housing,
   &--souvenirs {
-    position: relative;
     text-align: left;
     margin-bottom: 20px;
   }
@@ -191,15 +234,42 @@
 
     &--housing {
       width: 186px;
+      margin-top: 100px;
+
+      &::before {
+        top: -100px;
+        left: 50px;
+        width: 75px;
+        height: 72px;
+        background-size: 75px 72px;
+      }
     }
 
     &--souvenirs {
       width: 195px;
+      margin-top: 100px;
       order: 2;
+
+      &::before {
+        top: -100px;
+        left: 50px;
+        width: 64px;
+        height: 75px;
+        background-size: 64px 75px;
+      }
     }
 
     &--food {
       width: 181px;
+      margin-top: 100px;
+
+      &::before {
+        top: -100px;
+        left: 50px;
+        width: 76px;
+        height: 71px;
+        background-size: 76px 71px;
+      }
     }
 
     &--inversed-order {

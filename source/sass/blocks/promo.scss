@@ -5,28 +5,29 @@
 }
 
 .promo__wrapper {
+  position: relative;
   width: 100%;
   height: 389px;
   margin: 0 auto;
   overflow: hidden;
 
-  background-color: $lightblue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 320px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -25%;
-    width: 768px;
-    height: 57px;
+    left: 0;
+    width: 320px;
+    height: 26px;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,17 +35,16 @@
 }
 
 .promo__slogan {
+  position: absolute;
   order: 2;
-  top: 20%;
-  left: 50%;
+  top: 10%;
+  left: 5%;
   margin: 0 auto;
+  width: 90%;
 }
 
 .promo__text {
-  padding-top: 43px;
-  padding-left: 32px;
-  padding-right: 33px;
-  padding-bottom: 10px;
+  padding: 43px 33px 10px 32px;
   text-align: center;
   min-height: 149px;
 }
@@ -81,24 +81,30 @@
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     &::before {
       content: "";
       position: absolute;
       bottom: 0;
-      left: -65%;
-      width: 1200px;
+      left: 0;
+      width: 768px;
       height: 57px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
     }
+  }
+
+  .promo__slogan {
+    left: 15%;
+    width: 70%;
   }
 
   .promo__text {
     @include reset-text;
-    padding-left: 139px;
-    padding-top: 51px;
-    padding-right: 139px;
-    padding-bottom: 55px;
+    padding: 51px 139px 55px;
   }
 
   .promo__title {
@@ -116,11 +122,32 @@
 @media (min-width: $desktop-width) {
   .promo__wrapper {
     width: 100%;
-    height: 518px;
-    object-fit: contain;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1200px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .promo__slogan {
+    left: 30%;
+    width: 40%;
   }
 
   .promo__text {

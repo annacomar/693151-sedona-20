@@ -50,11 +50,23 @@
       text-align: center;
     }
 
-    &--bridge,
-    &--cactus,
     &--roads {
       width: 324px;
       height: 267px;
+    }
+
+    &--cactus {
+      width: 324px;
+      height: 267px;
+      margin-left: 60px;
+    }
+
+    &--bridge {
+      display: block;
+      width: 324px;
+      height: 267px;
+      margin-left: 60px;
+      margin-top: -20px;
     }
   }
 
@@ -73,6 +85,11 @@
 
     &--roads {
       background-color: $lightgrey;
+    }
+
+    &--bridge,
+    &--cactus {
+      margin-left: 60px;
     }
   }
 
@@ -118,6 +135,9 @@
     &--bridge,
     &--cactus,
     &--roads {
+      display: block;
+      margin-left: 0;
+      margin-top: 0;
       width: 400px;
       height: 267px;
     }
