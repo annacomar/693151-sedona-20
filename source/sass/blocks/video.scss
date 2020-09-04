@@ -30,7 +30,14 @@
 }
 
 .video__wrapper {
+  position: relative;
   margin-bottom: 80px;
+}
+
+.video__controls {
+  position: absolute;
+  top: 63.5%;
+  left: 6%;
 }
 
 .video__interface {
@@ -47,26 +54,28 @@
 .video__scroller {
   display: block;
   margin: 0 auto;
-  padding: 17px 23px 15px 22px;
+  padding: 22px 23px 23px 22px;
   text-align: center;
   width: 280px;
   background-color: rgba(0, 0, 0, 0.6);
+}
 
-  &--input {
-    width: 235px;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
-    border-color: transparent;
-  }
+.video__input {
+  height: 3px;
+  width: 235px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  fill: transparent;
 }
 
 .video__button {
   border: none;
+  outline: none;
   background-color: transparent;
   fill: #5c6870;
 
   &:hover {
-    fill: #333333;
+    background-color: #333333;
   }
 
   &:active {
@@ -74,11 +83,23 @@
   }
 
   &--replay {
+    position: absolute;
+    top: 65%;
+    left: 10%;
     margin-right: 125px;
+  }
 
-    &--subtitles {
-      margin-right: 31px;
-    }
+  &--subtitles {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    margin-right: 31px;
+  }
+
+  &--fullscreen {
+    position: absolute;
+    top: 65%;
+    left: 75%;
   }
 }
 
@@ -95,18 +116,31 @@
   }
 
   .video__wrapper {
-    position: relative;
     width: 648px;
     height: 499px;
     margin-left: 60px;
   }
 
-  .video__scroller {
+  .video__controls {
     position: absolute;
     bottom: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__scroller {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+  }
+
+  .video__input {
+    width: 390px;
+    margin-left: 93px;
+    background-color: $white;
+    opacity: 0.6;
   }
 
   .video__interface {
@@ -115,7 +149,27 @@
     left: 0;
     width: 648px;
     height: 93px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__button {
+    fill: $white;
+
+    &--replay {
+      top: 35%;
+      left: 5%;
+    }
+
+    &--subtitles {
+      fill: $white;
+      top: 35%;
+      left: 80%;
+    }
+
+    &--fullscreen {
+      top: 35%;
+      left: 90%;
+    }
   }
 }
 

@@ -5,19 +5,19 @@
 }
 
 .feedback__wrapper {
-  @include reset-text;
   display: flex;
 
   &--contacts {
-    position: relative;
     flex-direction: column;
   }
 
   &--radio {
+    position: relative;
     margin-bottom: 20px;
   }
 
   &--checkbox {
+    position: relative;
     margin-bottom: 25px;
   }
 }
@@ -139,6 +139,65 @@
     text-transform: none;
     color: $darkblack;
   }
+
+  &--radio {
+    display: block;
+    margin-left: 75px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: $white-greyish;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+    }
+  }
+
+  &--positive-impression {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 17px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: $lighterblack;
+    }
+  }
+
+  &--checkbox {
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 46px;
+      height: 46px;
+      background-color: $white-greyish;
+    }
+
+    &:checked {
+      background-color: $white-greyish;
+      background-image: url("../img/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .feedback__input {
@@ -155,6 +214,7 @@
   &--grey {
     height: 58px;
     background-color: $white-greyish;
+    padding-left: 22px;
   }
 
   &--email,
@@ -213,13 +273,6 @@
     &:active {
       background-color: #d5d5d5;
     }
-
-    &--checked {
-      background-color: $white-greyish;
-      background-image: url("../img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
   }
 }
 
@@ -243,11 +296,15 @@
   color: #ffffff;
 }
 
+.feedback__tel-email-wrapper {
+  position: relative;
+}
+
 .feedback__icon-wrapper {
   position: absolute;
   padding: 20px 19px 20px 21px;
-  top: 180%;
-  left: 62%;
+  top: 20%;
+  left: 80%;
   width: 58px;
   height: 58px;
   background-color: $grey;
@@ -275,6 +332,7 @@
   }
 
   .feedback__form {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -283,6 +341,11 @@
   .feedback__list {
     &--checkbox {
       flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &--checkbox li {
+      width: 50%;
     }
   }
 
@@ -290,6 +353,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    border-bottom: none;
+    padding: 0;
 
     &--name-surname-patronymic {
       order: 2;
@@ -316,6 +381,14 @@
 
     &--your-emotions {
       order: 5;
+      width: 648px;
+      padding-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  .feedback__input {
+    &--describe-more {
       width: 648px;
     }
   }
@@ -345,21 +418,90 @@
     }
 
     &--contact-information {
+      position: relative;
       margin-bottom: 32px;
       text-align: center;
       width: 297px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: -60%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: -60%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
     }
 
     &--sightseengs-visited {
+      position: relative;
       margin-bottom: 48px;
       text-align: center;
       width: 278px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: -67%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: -67%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
     }
 
     &--your-emotions {
+      position: relative;
       margin-bottom: 60px;
       text-align: center;
-      width: 250px;
+      width: 280px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: -67%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: -67%;
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
     }
   }
 
@@ -371,11 +513,21 @@
     }
   }
 
+  .feedback__icon-wrapper {
+    left: 92%;
+  }
+
   .feedback__button {
     width: 324px;
     order: 6;
     text-align: left;
     padding: 21px 75px 21px 64px;
+  }
+
+  .feedback__legend {
+    position: absolute;
+    left: 75%;
+    top: 97%;
   }
 }
 
@@ -432,18 +584,54 @@
       margin-bottom: 77px;
       width: 279px;
       text-align: center;
+
+      &::before {
+        width: 280px;
+        left: -120%;
+      }
+
+      &::after {
+        width: 280px;
+        right: -120%;
+      }
     }
 
     &--sightseengs-visited {
       margin-bottom: 50px;
       width: 278px;
       text-align: center;
+
+      &::before {
+        width: 280px;
+        left: -120%;
+      }
+
+      &::after {
+        width: 280px;
+        right: -120%;
+      }
     }
 
     &--your-emotions {
       text-align: center;
-      width: 250px;
+      width: 280px;
       margin-bottom: 60px;
+
+      &::before {
+        width: 280px;
+        left: -120%;
+      }
+
+      &::after {
+        width: 280px;
+        right: -120%;
+      }
+    }
+  }
+
+  .feedback__list {
+    &--checkbox li {
+      width: 25%;
     }
   }
 
@@ -495,6 +683,15 @@
     display: flex;
     flex-direction: row;
     width: 960px;
+  }
+
+  .feedback__tel-email-wrapper {
+    width: 50%;
+  }
+
+  .feedback__icon-wrapper {
+    top: 0;
+    left: 65%;
   }
 
   .feedback__button {

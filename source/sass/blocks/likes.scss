@@ -7,7 +7,6 @@
   height: 21px;
   background-color: transparent;
   border: none;
-  background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -23,5 +22,12 @@
   .likes__button {
     position: absolute;
     right: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .likes__button {
+    fill: $white;
+    opacity: 1;
   }
 }

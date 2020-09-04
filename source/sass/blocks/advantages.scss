@@ -30,6 +30,22 @@
     background-color: #e6e6e6;
     border-bottom: 1px solid rgba(51, 0, 0, 0.1);
   }
+
+  &--real-city {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 320px;
+      height: 37px;
+      background-image: url("../img/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 .advantages__image {
@@ -317,6 +333,12 @@
 
     &--souvenirs {
       order: 1;
+    }
+
+    &--real-city {
+      &::before {
+        display: none;
+      }
     }
   }
 

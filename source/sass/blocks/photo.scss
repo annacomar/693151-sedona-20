@@ -37,7 +37,7 @@
   font-weight: bold;
   line-height: 24px;
   text-align: left;
-  color: #000000;
+  fill: #000000;
 }
 
 @media (min-width: $tablet-width) {
@@ -145,7 +145,8 @@
 
   .photo__author,
   .photo__likes,
-  .photo__title {
+  .photo__title,
+  .likes__button {
     color: $white;
     opacity: 1;
   }
