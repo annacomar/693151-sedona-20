@@ -63,13 +63,6 @@
     padding-bottom: 24px;
     border-bottom: solid $white-greyish 1px;
   }
-
-  &--your-emotions {
-    padding-top: 24px;
-    margin-bottom: 51px;
-    margin-left: 19px;
-    margin-right: 22px;
-  }
 }
 
 .feedback__title {
@@ -153,15 +146,6 @@
       height: 56px;
       border-radius: 50%;
       background-color: $white-greyish;
-    }
-
-    &:hover {
-      background-color: #e5e5e5;
-      cursor: pointer;
-    }
-
-    &:active {
-      background-color: #d5d5d5;
     }
   }
 
@@ -251,11 +235,32 @@
     border: solid 5px $white-greyish;
     background-color: $white-greyish;
 
-    &:hover {
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &--radio:checked {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 17px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: $lighterblack;
+    }
+  }
+
+  &--radio + label:hover {
+    &::before {
       background-color: #e5e5e5;
     }
+  }
 
-    &:active {
+  &--radio + label:active {
+    &::before {
       background-color: #d5d5d5;
     }
   }
@@ -364,7 +369,18 @@
     &--your-impressions {
       order: 1;
       width: 50%;
-      border-right: solid $white-greyish 1px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 10%;
+        width: 1px;
+        height: 292px;
+        background-color: #dbdbdb;
+        background-repeat: no-repeat;
+      }
     }
 
     &--contact-information {
@@ -548,7 +564,6 @@
 
     &--your-impressions {
       order: 1;
-      border-right: solid $white-greyish 1px;
     }
 
     &--name-surname-patronymic {
@@ -559,6 +574,7 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+      margin-bottom: 50px;
     }
 
     &--your-emotions {
@@ -683,6 +699,7 @@
     display: flex;
     flex-direction: row;
     width: 960px;
+    margin-bottom: 50px;
   }
 
   .feedback__tel-email-wrapper {
