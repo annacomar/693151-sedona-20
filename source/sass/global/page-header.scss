@@ -10,23 +10,38 @@
 
 .page-header__logo-wrapper {
   position: absolute;
-  width: 102px;
-  height: 83px;
+  z-index: 10;
+  top: 0;
   left: 35%;
+}
+
+.page-header__logo-image {
+  width: 102px;
+  height: 84px;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .page-header__logo-wrapper {
-    left: 40%;
-    width: 187px;
-    height: 97px;
+    left: 45%;
+    top: 0;
+  }
+
+  .page-header__logo-image {
+    width: 102px;
+    height: 84px;
+    text-align: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo-wrapper {
-    left: 65%;
-    width: 188px;
-    height: 96px;
+    left: 40%;
+  }
+
+  .page-header__logo-image {
+    width: 187px;
+    height: 96.5px;
+    text-align: center;
   }
 }

@@ -7,8 +7,27 @@
   height: 21px;
   background-color: transparent;
   border: none;
-  background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  opacity: 0.3;
+  fill: $darkblack;
+}
+
+@media (min-width: $tablet-width) {
+  .likes {
+    position: relative;
+  }
+
+  .likes__button {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .likes__button {
+    fill: $white;
+    opacity: 1;
+  }
 }

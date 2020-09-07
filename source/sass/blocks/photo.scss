@@ -1,8 +1,14 @@
 .photo__image {
   display: block;
+  margin-bottom: 10px;
   width: 100%;
-  padding: 20px 22px;
   height: 280px;
+}
+
+.photo__info-wrapper {
+  padding-bottom: 23px;
+  margin-bottom: 20px;
+  border-bottom: solid #f2f2f2 1px;
 }
 
 .photo__title {
@@ -17,8 +23,9 @@
 
 .photo__author {
   @include reset-text;
+  margin-bottom: 10px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 24px;
   text-align: left;
   color: #333333;
@@ -30,53 +37,97 @@
   font-weight: bold;
   line-height: 24px;
   text-align: left;
-  color: #000000;
-}
-
-.photo__wrapper {
-  margin-left: 20px;
-  margin-right: 120px;
-  padding-top: 22px;
-  padding-bottom: 23px;
+  fill: #000000;
 }
 
 @media (min-width: $tablet-width) {
   .photo__image {
-    &--sunset {
+    margin-bottom: 0;
+
+    &--promo {
       width: 100%;
       height: 400px;
+      text-align: center;
     }
 
-    &--bridge,
-    &--cactus,
     &--roads {
       width: 324px;
       height: 267px;
     }
+
+    &--cactus {
+      width: 324px;
+      height: 267px;
+      margin-left: 60px;
+    }
+
+    &--bridge {
+      display: block;
+      width: 324px;
+      height: 267px;
+      margin-left: 60px;
+      margin-top: -20px;
+    }
   }
 
-  .photo__wrapper {
+  .photo__info-wrapper {
     display: flex;
-    flex-direction: column;
+    width: 324px;
     padding-top: 22px;
     padding-bottom: 21px;
     justify-content: space-between;
     background-color: $white-greyish;
+
+    &--sunset {
+      width: 648px;
+      margin: 0 auto;
+    }
+
+    &--roads {
+      background-color: $lightgrey;
+    }
+
+    &--bridge,
+    &--cactus {
+      margin-left: 60px;
+    }
   }
 
-  .photo__wrapper:nth-child(3) {
-    background-color: $lightgrey;
+  .photo__caption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  .photo__likes {
+    margin-right: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .photo__wrapper {
+  .photo {
+    position: relative;
+  }
+
+  .photo__info-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
-    /*transparent?? captions on the photo???*/
+    margin: 0;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &--sunset {
+      width: 1200px;
+    }
   }
 
   .photo__image {
-    &--sunset {
+    padding: 0;
+
+    &--promo {
       width: 1200px;
       height: 400px;
     }
@@ -84,8 +135,19 @@
     &--bridge,
     &--cactus,
     &--roads {
+      display: block;
+      margin-left: 0;
+      margin-top: 0;
       width: 400px;
       height: 267px;
     }
+  }
+
+  .photo__author,
+  .photo__likes,
+  .photo__title,
+  .likes__button {
+    color: $white;
+    opacity: 1;
   }
 }

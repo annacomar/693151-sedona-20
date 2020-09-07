@@ -6,12 +6,17 @@
 .site-list__link {
   display: block;
   padding-top: 21px;
-  padding-bottom: 20px;
-  line-height: 40px;
+  padding-bottom: 18px;
+  font-size: 18px;
+  line-height: 20px;
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  //box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  //border-top: 1px solid rgba(255, 255, 255, 0.3);
+  //border-bottom: 1px solid #5496bd;
 
   &:hover {
     background-color: #669ec0;
@@ -27,16 +32,13 @@
   .site-list {
     display: flex;
     flex-wrap: wrap;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 11px;
-    text-align: center;
     background-color: $white;
     box-shadow: none;
   }
 
   .site-list__item {
     width: 25%;
+    margin-top: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -47,9 +49,31 @@
     background: none;
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
     text-decoration: none;
     box-shadow: none;
     color: #766357;
+
+    &--main {
+      text-align: left;
+      margin-left: 34px;
+    }
+
+    &--photo {
+      text-align: left;
+      margin-left: 10px;
+    }
+
+    &--form {
+      text-align: right;
+    }
+
+    &--academy {
+      text-align: right;
+      margin-right: 15px;
+    }
 
     &:hover {
       color: #604e43;
@@ -81,8 +105,21 @@
   .site-list {
     font-size: 14px;
     font-weight: bold;
-    line-height: 11px;
-    text-align: center;
+    line-height: 26px;
     background-color: $white;
+  }
+
+  .site-list__link {
+    &--main {
+      margin-left: 76px;
+    }
+
+    &--photo {
+      margin-left: 30px;
+    }
+
+    &--academy {
+      margin-right: 55px;
+    }
   }
 }
