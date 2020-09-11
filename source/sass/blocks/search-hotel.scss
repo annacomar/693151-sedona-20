@@ -12,16 +12,20 @@
 
 .search-hotel__title {
   @include reset-text;
+  display: block;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 26px;
   color: #000000;
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 .search-hotel__text {
   @include reset-text;
-  margin-top: 33px;
+  width: 265px;
+  margin-bottom: -3px;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
@@ -29,10 +33,14 @@
   color: #333333;
 }
 
+.search-hotel__text br {
+  display: none;
+}
+
 .search-hotel__show {
   width: 280px;
-  height: 58px;
   margin: 0 auto;
+  padding-bottom: 16px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -42,10 +50,7 @@
 
 @media (min-width: $tablet-width) {
   .search-hotel {
-    padding-left: 167px;
-    padding-top: 57px;
-    padding-right: 167px;
-    padding-bottom: 58px;
+    padding-top: 59px;
   }
 
   .search-hotel__wrapper {
@@ -55,19 +60,25 @@
   }
 
   .search-hotel__show {
+    display: inline-block;
     width: 458px;
-    padding-left: 136px;
-    padding-right: 136px;
+    padding-left: 132px;
+    padding-right: 132px;
   }
 
   .search-hotel__title {
+    margin-bottom: 35px;
     font-size: 30px;
     font-weight: bold;
     line-height: 26px;
   }
 
   .search-hotel__text {
-    width: 432px;
+    width: 435px;
+  }
+
+  .search-hotel__text br {
+    display: block;
   }
 }
 
@@ -75,10 +86,9 @@
   .search-hotel {
     padding-left: 371px;
     padding-right: 371px;
-    padding-bottom: 66px;
   }
 
-  .search-hotel__wrapper {
-    margin-bottom: 52px;
+  .search-hotel__show {
+    margin-bottom: 10px;
   }
 }

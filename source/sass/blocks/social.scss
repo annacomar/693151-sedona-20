@@ -1,6 +1,8 @@
 .social__list {
   @include reset-list;
   display: flex;
+  margin-left: -4px;
+  margin-top: -7px;
 }
 
 .social__list:last-child {
@@ -42,12 +44,13 @@
 
 @media (min-width: $tablet-width) {
   .social__list {
-    width: 150px;
+    margin-left: -5px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .social__list {
     width: 400px;
+    margin-left: 130px;
   }
 }

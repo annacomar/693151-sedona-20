@@ -1,3 +1,9 @@
 .desktop-hidden {
-  display: none;
+  display: static;
+}
+
+@media (min-width: $desktop-width) {
+  .desktop-hidden {
+    display: none;
+  }
 }

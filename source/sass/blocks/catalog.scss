@@ -4,10 +4,6 @@
   margin: 0 auto;
 }
 
-.catalog__item {
-  border-bottom: solid #f2f2f2 1px;
-}
-
 .catalog__sublist {
   @include reset-list;
 }
@@ -17,6 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 768px;
+    padding-top: 0;
   }
 
   .catalog__item {
@@ -35,6 +32,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog__list {
+    padding-top: 5px;
     width: 1200px;
   }
 
@@ -47,5 +45,9 @@
 
   .catalog__subitem {
     width: 400px;
+  }
+
+  .catalog__sublist {
+    margin-top: -2px;
   }
 }
