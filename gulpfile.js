@@ -40,10 +40,10 @@ const html = () => {
     "source/*.html"
   ], {
     base: "source"
-})
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"))
-  .pipe(sync.stream());
+  })
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
 }
 
 exports.html = html;
@@ -67,7 +67,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass//*.sass", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
 }
 
@@ -78,16 +78,16 @@ exports.default = gulp.series(
 // copy
 
 const copy = () => {
-   return gulp.src([
-        "source/fonts//*.{woff,woff2}",
-        "source/img/",
-        "source/js/",
-        "source/*.ico"
-    ], {
-        base: "source"
- })
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**/*.{jpg,png,svg}",
+    "source/js/**/*.js",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
     .pipe(gulp.dest("build"));
-  };
+};
 
 exports.copy = copy;
 
@@ -102,38 +102,38 @@ exports.clean = clean;
 // Images optimization
 
 const images = () => {
-  return gulp.src("source/img//*.{jpg,png,svg}")
-  .pipe(imagemin([
-  imagemin.optipng({optimizationLevel: 3}),
-  imagemin.mozjpeg({progressive: true}),
-  imagemin.svgo()
-  ]))
-  }
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.svgo()
+    ]))
+}
 
-  exports.images = images;
+exports.images = images;
 
-  // create WebP
+// create WebP
 
-  const createWebp = () => {
-  return gulp.src("source/img//*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"))
- }
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"))
+}
 
- exports.webp = createWebp;
+exports.webp = createWebp;
 
- //create SVG sprite
+//create SVG sprite
 
- const sprite = () => {
+const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
-  .pipe(svgstore())
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
-  }
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
 
-  exports.sprite = sprite;
+exports.sprite = sprite;
 
-  // build
+// build
 
 const build = gulp.series(
   clean,
@@ -143,18 +143,18 @@ const build = gulp.series(
   html
 );
 
-  exports.build = build;
+exports.build = build;
 
-  // start
+// start
 
-  const start = gulp.series(
-    clean,
-    copy,
-    styles,
-    sprite,
-    html,
-    server,
-    watcher
-  );
+const start = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite,
+  html,
+  server,
+  watcher
+);
 
-  exports.start = start;
+exports.start = start;
