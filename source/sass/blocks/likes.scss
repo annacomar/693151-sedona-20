@@ -5,6 +5,8 @@
 .likes__button {
   width: 23px;
   height: 21px;
+  margin-top: -4px;
+  margin-right: 15px;
   background-color: transparent;
   border: none;
   background-repeat: no-repeat;
@@ -17,11 +19,45 @@
 @media (min-width: $tablet-width) {
   .likes {
     position: relative;
+    margin-top: 14px;
+    margin-right: 20px;
   }
 
   .likes__button {
     position: absolute;
     right: 10px;
+
+    &--sunset {
+      right: 92%;
+    }
+
+    &--cactus {
+      right: 95%;
+    }
+
+    &--roads {
+      right: 92%;
+    }
+
+    &--bridge {
+      right: 96%;
+    }
+  }
+
+  .likes__title {
+    display: block;
+
+    &--cactus {
+      margin-right: 9px;
+    }
+
+    &--roads {
+      margin-right: 16px;
+    }
+
+    &--bridge {
+      margin-right: 9px;
+    }
   }
 }
 

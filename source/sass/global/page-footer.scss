@@ -11,9 +11,10 @@
 
 .page-footer__tag {
   @include reset-text;
+  display: block;
   margin: 0 auto;
+  margin-top: -4px;
   width: 136px;
-  min-height: 16px;
 }
 
 .page-footer__social {
@@ -29,19 +30,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 0;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    margin-top: -3px;
+    padding-top: 9px;
   }
 
   .page-footer__social {
     display: flex;
     flex-wrap: wrap;
-    //width: 648px;
   }
 
   .page-footer__tag {
-    //width: 136px;
+    margin-top: 4px;
+    margin-left: 61px;
   }
 }
 
@@ -51,6 +51,7 @@
   }
 
   .page-footer__tag {
-    width: 400px;
+    //width: 400px;
+    margin-left: 120px;
   }
 }

@@ -45,6 +45,7 @@
   padding: 0 20px 25px;
 
   &--name-surname-patronymic {
+    margin-bottom: -32px;
     border-bottom: solid $white-greyish 1px;
   }
 
@@ -77,11 +78,11 @@
 
   &--name-surname-patronymic {
     display: block;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
   }
 
   &--contact-information {
-    margin-bottom: 29px;
+    margin-bottom: 5px;
     padding-top: 20px;
   }
 
@@ -90,7 +91,8 @@
   }
 
   &--sightseengs-visited {
-    margin-bottom: 26px;
+    margin-top: -8px;
+    margin-bottom: 20px;
   }
 
   &--your-emotions {
@@ -107,12 +109,14 @@
 
   &--tel {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    margin-left: 23px;
   }
 
   &--email {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+    margin-left: 23px;
   }
 
   &--devils-bridge,
@@ -133,6 +137,26 @@
     color: $darkblack;
   }
 
+  &--devils-bridge {
+    margin-left: 40px;
+    margin-bottom: 14px;
+  }
+
+  &--mountain-bell {
+    margin-left: 40px;
+    margin-bottom: 18px;
+  }
+
+  &--slide-park {
+    margin-left: 40px;
+    margin-bottom: 19px;
+  }
+
+  &--red-cliffs {
+    margin-left: 40px;
+    margin-bottom: -5px;
+  }
+
   &--radio {
     display: block;
     margin-left: 75px;
@@ -150,6 +174,8 @@
   }
 
   &--positive-impression {
+    margin-bottom: 15px;
+
     &::after {
       content: "";
       position: absolute;
@@ -174,25 +200,29 @@
       height: 46px;
       background-color: $white-greyish;
     }
+  }
 
-    &:checked {
-      background-color: $white-greyish;
-      background-image: url("../img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  &--negative-impression {
+    margin-bottom: 13px;
   }
 }
 
 .feedback__input {
   border: none;
 
+  &--checkbox + label:checked {
+    background-color: $white-greyish;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   &--name,
   &--patronymic,
   &--surname {
     flex-grow: 1;
     margin-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &--grey {
@@ -205,19 +235,22 @@
   &--tel {
     padding-left: 22px;
     padding-right: 64px;
-    margin-bottom: 14px;
+  }
+
+  &--email {
+    margin-bottom: -14px;
   }
 
   &--describe-more {
     @include reset-text;
     width: 279px;
     height: 160px;
-    margin-bottom: 51px;
+    margin-bottom: 10px;
     background-color: $white-greyish;
     outline: none;
     text-align: left;
     padding-left: 21px;
-    padding-top: 22px;
+    padding-top: 20px;
   }
 
   &:hover {
@@ -292,8 +325,7 @@
 
 .feedback__button {
   width: 280px;
-  height: 58px;
-  margin: 0 auto;
+  margin: 0 auto 44px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -331,7 +363,7 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
-    margin-bottom: 61px;
+    margin-bottom: 6px;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -355,6 +387,7 @@
   }
 
   .feedback__fieldset {
+    margin-bottom: 21px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -364,6 +397,7 @@
     &--name-surname-patronymic {
       order: 2;
       width: 50%;
+      padding-left: 55px;
     }
 
     &--your-impressions {
@@ -375,7 +409,7 @@
         content: "";
         position: absolute;
         top: 0;
-        right: 10%;
+        right: 0;
         width: 1px;
         height: 292px;
         background-color: #dbdbdb;
@@ -386,6 +420,7 @@
     &--contact-information {
       order: 3;
       width: 648px;
+      margin-bottom: 29px;
     }
 
     &--sightseengs-visited {
@@ -400,6 +435,7 @@
       width: 648px;
       padding-top: 0;
       margin-left: 0;
+      margin-bottom: 45px;
     }
   }
 
@@ -435,7 +471,7 @@
 
     &--contact-information {
       position: relative;
-      margin-bottom: 32px;
+      margin-bottom: 8px;
       text-align: center;
       width: 297px;
 
@@ -527,23 +563,57 @@
     &--surname {
       margin-top: 5px;
     }
+
+    &--positive-impression {
+      margin-bottom: 28px;
+    }
+
+    &--negative-impression {
+      margin-bottom: 20px;
+    }
+
+    &--email {
+      margin-top: 6px;
+      margin-bottom: 9px;
+    }
+
+    &--devils-bridge,
+    &--slide-park {
+      margin-left: 137px;
+      margin-top: 15px;
+    }
+
+    &--mountain-bell,
+    &--red-cliffs {
+      margin-left: 70px;
+    }
   }
 
   .feedback__icon-wrapper {
-    left: 92%;
+    left: 91%;
+
+    &--email {
+      top: 30%;
+    }
   }
 
   .feedback__button {
     width: 324px;
     order: 6;
     text-align: left;
-    padding: 21px 75px 21px 64px;
+    padding: 21px 72px 21px 60px;
   }
 
   .feedback__legend {
     position: absolute;
     left: 75%;
-    top: 97%;
+    top: 93.5%;
+  }
+
+  .feedback__tel-email-wrapper {
+    &--tel {
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -551,7 +621,7 @@
   .feedback {
     margin-left: 120px;
     margin-right: 120px;
-    margin-bottom: 66px;
+    margin-bottom: 16px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -574,11 +644,16 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     &--your-emotions {
       width: 960px;
+    }
+
+    &--contact-information {
+      margin-left: -19px;
+      margin-bottom: -16px;
     }
   }
 
@@ -592,12 +667,12 @@
 
     &--your-impressions {
       margin-bottom: 67px;
-      width: 273px;
-      text-align: left;
+      margin-left: 73px;
     }
 
     &--contact-information {
-      margin-bottom: 77px;
+      margin-bottom: 65px;
+      padding-top: 33px;
       width: 279px;
       text-align: center;
 
@@ -643,6 +718,10 @@
         right: -120%;
       }
     }
+
+    &--name-surname-patronymic {
+      margin-bottom: 55px;
+    }
   }
 
   .feedback__list {
@@ -652,12 +731,37 @@
   }
 
   .feedback__label {
+    &--positive-impression {
+      margin-bottom: 20px;
+    }
+
     &--tel {
       width: 70px;
     }
 
     &--email {
       width: 147px;
+    }
+
+    &--devils-bridge,
+    &--mountain-bell,
+    &--slide-park,
+    &--red-cliffs {
+      margin: 0;
+      margin-left: 40px;
+      margin-top: 5px;
+    }
+
+    &--mountain-bell {
+      margin-left: 60px;
+    }
+
+    &--slide-park {
+      margin-left: 80px;
+    }
+
+    &--red-cliffs {
+      margin-left: 73px;
     }
   }
 
@@ -689,7 +793,6 @@
 
   .feedback__wrapper {
     &--contacts {
-      width: 50%;
       flex-direction: row;
       align-items: center;
     }
@@ -708,13 +811,21 @@
 
   .feedback__icon-wrapper {
     top: 0;
-    left: 65%;
+    left: 76.5%;
+
+    &--email {
+      left: 92%;
+    }
   }
 
   .feedback__button {
     width: 480px;
-    padding: 21px 147px 21px 148px;
+    padding: 13px 144px;
     margin-right: 470px;
     font-size: 21px;
+  }
+
+  .feedback__legend {
+    left: 83%;
   }
 }

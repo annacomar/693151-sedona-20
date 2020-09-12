@@ -2,6 +2,7 @@
   display: flex;
   width: 140px;
   margin: 0 auto 23px;
+  margin-top: -3px;
   justify-content: space-around;
 }
 
@@ -27,7 +28,7 @@
 
 @media (min-width: $tablet-width) {
   .made-by {
-    //width: 150px;
+    margin-right: 53px;
   }
 }
 
@@ -36,10 +37,10 @@
     display: flex;
     justify-content: flex-end;
     width: 400px;
+    margin-right: 114px;
   }
 
   .made-by__icon {
     margin-left: 11px;
-    margin-right: 120px;
   }
 }
