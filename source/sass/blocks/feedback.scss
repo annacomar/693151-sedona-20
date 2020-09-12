@@ -171,12 +171,8 @@
       border-radius: 50%;
       background-color: $white-greyish;
     }
-  }
 
-  &--positive-impression {
-    margin-bottom: 15px;
-
-    &::after {
+    &:checked::after {
       content: "";
       position: absolute;
       top: 19px;
@@ -187,6 +183,7 @@
       background-color: $lighterblack;
     }
   }
+
 
   &--checkbox {
     padding-left: 40px;
@@ -249,6 +246,11 @@
     background-color: $white-greyish;
     outline: none;
     text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 26px;
+    color: $darkblack;
     padding-left: 21px;
     padding-top: 20px;
   }
@@ -666,7 +668,7 @@
     color: $darkblack;
 
     &--your-impressions {
-      margin-bottom: 67px;
+      margin-bottom: 45px;
       margin-left: 73px;
     }
 
@@ -745,11 +747,9 @@
 
     &--devils-bridge,
     &--mountain-bell,
-    &--slide-park,
-    &--red-cliffs {
-      margin: 0;
-      margin-left: 40px;
-      margin-top: 5px;
+    &--red-cliffs,
+    &--slide-park {
+      margin: 5px 0 0 40px;
     }
 
     &--mountain-bell {
@@ -811,7 +811,7 @@
 
   .feedback__icon-wrapper {
     top: 0;
-    left: 76.5%;
+    left: 75.5%;
 
     &--email {
       left: 92%;
@@ -820,7 +820,7 @@
 
   .feedback__button {
     width: 480px;
-    padding: 13px 144px;
+    padding: 13px 121px;
     margin-right: 470px;
     font-size: 21px;
   }

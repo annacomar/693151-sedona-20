@@ -1,56 +1,55 @@
-.modal__window {
+.modal {
   display: none;
-  //display: flex;
-  margin: auto;
-  //position: fixed;
-  color: $lighterblack;
-  background-color: $white;
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
   width: 320px;
+  background-color: $white;
 
   &--not-sent {
-    padding: 46px 57px 35px 56px;
-    //top: -20px;
-    //left: 82px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -160px;
   }
 
   &--sent {
-    padding-top: 49px;
-    padding-right: 54px;
-    padding-left: 52px;
+    height: 323px;
+    margin-top: -161.5px;
+    margin-left: -160px;
   }
 }
 
-.modal__wrapper {
+.modal-wrapper {
   &--not-sent {
-    width: 207px;
-    margin: auto;
-    font-style: inherit;
+    padding: 30px 30px 20px;
   }
 
   &--sent {
-    width: 214px;
-    margin: auto;
+    padding: 30px 20px 20px;
   }
 }
 
 .modal__title {
   @include reset-text;
   margin-bottom: 30px;
-  color: $darkblack;
   font-size: 18px;
-  line-height: 26px;
   font-weight: bold;
-  font-style: inherit;
-  text-align: center;
+  font-style: normal;
   text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+  color: $darkblack;
 }
 
 .modal__text {
   @include reset-text;
   font-size: 14px;
+  color: $lighterblack;
   line-height: 24px;
   font-weight: normal;
   text-align: center;
+  font-style: normal;
   text-transform: uppercase;
 
   &--not-sent {
@@ -62,24 +61,82 @@
   }
 }
 
-.modal__button-wrapper {
-  &--not-sent {
-    width: 180px;
-    padding-left: 78px;
-    padding-top: 22px;
-    padding-right: 79px;
-    padding-bottom: 22px;
-  }
-
-  &--sent {
-    width: 280px;
-    padding: 20px 20px 20px 20px;
-    background-color: $white-greyish;
-  }
-}
-
 .modal__button {
   display: inline-block;
   text-align: center;
   margin: auto;
+  width: 180px;
+  background-color: $lightblue;
+
+  &--sent {
+    width: 280px;
+    padding: 21px 40px;
+    margin-left: 20px;
+  }
+
+  &--not-sent {
+    width: 180px;
+    margin-left: 70px;
+  }
+}
+
+.modal__button-wrapper {
+  padding-top: 15px;
+  width: 320px;
+  height: 98px;
+  background-color: $white-greyish;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    &--sent {
+      width: 640px;
+      height: 347px;
+      margin-top: -173.5px;
+      margin-left: -320px;
+    }
+
+    &--not-sent {
+      width: 400px;
+      height: 347px;
+      margin-left: -200px;
+      margin-top: -173.5px;
+    }
+  }
+
+  .modal-wrapper {
+    &--sent {
+      padding-top: 45px;
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+
+    &--not-sent {
+      padding-top: 60px;
+      padding-left: 46.5px;
+      padding-right: 46.5px;
+    }
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal__button {
+    &--sent {
+      width: 458px;
+      margin-left: 91px;
+      margin-top: 25px;
+    }
+
+    &--not-sent {
+      width: 272px;
+    }
+  }
+
+  .modal__button-wrapper {
+    width: 640px;
+    height: 146px;
+  }
 }
