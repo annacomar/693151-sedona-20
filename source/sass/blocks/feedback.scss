@@ -78,11 +78,11 @@
 
   &--name-surname-patronymic {
     display: block;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   &--contact-information {
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     padding-top: 20px;
   }
 
@@ -91,8 +91,8 @@
   }
 
   &--sightseengs-visited {
-    margin-top: -8px;
-    margin-bottom: 20px;
+    margin-top: -5px;
+    margin-bottom: 23px;
   }
 
   &--your-emotions {
@@ -106,6 +106,12 @@
   line-height: 26px;
   margin-right: 15px;
   text-transform: uppercase;
+
+  &--name,
+  &--patronymic,
+  &--surname {
+    margin-top: 8px;
+  }
 
   &--tel {
     text-align: left;
@@ -171,35 +177,29 @@
       border-radius: 50%;
       background-color: $white-greyish;
     }
-
-    /*&:checked::after {
-      content: "";
-      position: absolute;
-      top: 19px;
-      left: 17px;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background-color: $lighterblack;
-    }*/
   }
 
   &--checkbox {
-    padding-left: 40px;
+    padding-left: 38px;
 
     &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 46px;
-      height: 46px;
+      width: 50px;
+      height: 50px;
+      border-radius: 10%;
       background-color: $white-greyish;
     }
   }
 
+  &--positive-impression {
+    margin-bottom: 14px;
+  }
+
   &--negative-impression {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 }
 
@@ -213,7 +213,7 @@
   &--name,
   &--patronymic,
   &--surname {
-    flex-grow: 1;
+    flex-grow: initial;
     margin-top: -10px;
     margin-bottom: 16px;
   }
@@ -295,9 +295,8 @@
   }
 
   &--checkbox {
-    width: 46px;
-    height: 46px;
-    border: solid 5px $white-greyish;
+    width: 48px;
+    height: 48px;
     background-color: $white-greyish;
 
     &:hover {
@@ -312,8 +311,8 @@
   &--checkbox:checked + label::after {
     position: absolute;
     content: "";
-    top: 11px;
-    left: 11px;
+    top: 15.5px;
+    left: 13px;
     width: 23.5px;
     height: 16.5px;
     background-color: $white-greyish;
