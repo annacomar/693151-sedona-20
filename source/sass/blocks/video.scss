@@ -35,12 +35,11 @@
 }
 
 .video__scroller {
-  display: block;
   position: absolute;
-  top: 57%;
+  top: 58.5%;
   left: 6%;
   margin: 0 auto;
-  padding: 12px 23px 13px 22px;
+  padding: 22px 23px 20px 22px;
   text-align: center;
   width: 280px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -49,9 +48,18 @@
 .video__input {
   height: 3px;
   width: 235px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__toggle {
+  position: absolute;
+  top: 42%;
+  left: 22%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $white;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
-  fill: $white;
 }
 
 .video__interface {
@@ -126,21 +134,23 @@
   }
 
   .video__scroller {
-    position: absolute;
-    bottom: 10%;
-    left: 0;
+    top: 89.5%;
+    left: 16%;
+    padding: 5px 0;
     width: 100%;
+    z-index: 20;
     background-color: transparent;
   }
 
+  .video__toggle {
+    top: 15%;
+    left: 15.5%;
+    z-index: 30;
+  }
+
   .video__input {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 390px;
-    margin-left: 93px;
-    fill: $white;
-    opacity: 0.6;
+    width: 389px;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   .video__interface {
@@ -188,10 +198,23 @@
     margin-bottom: 77px;
   }
 
+  .video__scroller {
+    top: 89.5%;
+    left: 12%;
+  }
+
+  .video__input {
+    width: 540px;
+  }
+
+  .video__toggle {
+    top: 20%;
+    left: 14%;
+  }
+
   .video__interface {
     width: 800px;
     height: 93px;
-    opacity: 0.6;
   }
 
   .video__button {

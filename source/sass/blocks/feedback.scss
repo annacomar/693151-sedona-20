@@ -298,12 +298,16 @@
     width: 48px;
     height: 48px;
     background-color: $white-greyish;
+  }
 
-    &:hover {
+  &--checkbox + label:hover {
+    &::before {
       background-color: #e5e5e5;
     }
+  }
 
-    &:focus {
+  &--checkbox + label:focus {
+    &::before {
       background-color: #d5d5d5;
     }
   }
@@ -315,15 +319,10 @@
     left: 13px;
     width: 23.5px;
     height: 16.5px;
-    background-color: $white-greyish;
+    background-color: transparent;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  &--checkbox:checked + label::before {
-    background-color: $white-greyish;
-    border: solid 5px $white-greyish;
   }
 }
 
@@ -339,8 +338,12 @@
 .feedback__button {
   width: 280px;
   margin: 0 auto 44px;
+  padding-left: 33px;
+  padding-top: 18px;
+  padding-right: 33px;
   font-size: 21px;
   line-height: 26px;
+  font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
@@ -614,7 +617,7 @@
     width: 324px;
     order: 6;
     text-align: left;
-    padding: 21px 72px 21px 60px;
+    padding: 21px 60px 21px 50px;
   }
 
   .feedback__legend {
@@ -831,7 +834,7 @@
 
   .feedback__button {
     width: 480px;
-    padding: 13px 121px;
+    padding: 18px 121px 13px 122px;
     margin-right: 470px;
     font-size: 21px;
   }
