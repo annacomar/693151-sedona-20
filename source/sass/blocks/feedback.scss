@@ -45,7 +45,6 @@
   padding: 0 20px 25px;
 
   &--name-surname-patronymic {
-    margin-bottom: -32px;
     border-bottom: solid $white-greyish 1px;
   }
 
@@ -413,7 +412,7 @@
     &--name-surname-patronymic {
       order: 2;
       width: 50%;
-      padding-left: 55px;
+      padding-left: 20px;
     }
 
     &--your-impressions {
@@ -487,6 +486,7 @@
 
     &--contact-information {
       position: relative;
+      margin: 0 auto;
       margin-bottom: 8px;
       text-align: center;
       width: 297px;
@@ -516,6 +516,7 @@
 
     &--sightseengs-visited {
       position: relative;
+      margin: 0 auto;
       margin-bottom: 48px;
       text-align: center;
       width: 278px;
@@ -545,6 +546,7 @@
 
     &--your-emotions {
       position: relative;
+      margin: 0 auto;
       margin-bottom: 60px;
       text-align: center;
       width: 280px;
@@ -654,6 +656,7 @@
 
     &--name-surname-patronymic {
       padding-left: 78px;
+      margin-bottom: 20px;
     }
 
     &--sightseengs-visited {
@@ -669,7 +672,7 @@
 
     &--contact-information {
       margin-left: -19px;
-      margin-bottom: -16px;
+      margin-bottom: -23px;
     }
   }
 
@@ -687,6 +690,7 @@
     }
 
     &--contact-information {
+      margin: 0 auto;
       margin-bottom: 65px;
       padding-top: 33px;
       width: 279px;
@@ -704,6 +708,7 @@
     }
 
     &--sightseengs-visited {
+      margin: 0 auto;
       margin-bottom: 50px;
       width: 278px;
       text-align: center;
@@ -722,6 +727,7 @@
     &--your-emotions {
       text-align: center;
       width: 280px;
+      margin: 0 auto;
       margin-bottom: 60px;
 
       &::before {
