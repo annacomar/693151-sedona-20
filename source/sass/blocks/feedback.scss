@@ -144,8 +144,8 @@
   }
 
   &--devils-bridge {
-    margin-left: 40px;
     margin-top: 0;
+    margin-left: 40px;
   }
 
   &--mountain-bell {
@@ -191,6 +191,7 @@
       height: 50px;
       border-radius: 10%;
       background-color: $white-greyish;
+      margin-top: -25px;
     }
   }
 
@@ -620,6 +621,10 @@
       margin-top: 6px;
       margin-bottom: 9px;
     }
+
+    &--devils-bridge {
+      margin-left: 40px;
+    }
   }
 
   .feedback__icon-wrapper {
@@ -813,7 +818,7 @@
       margin-top: 15px;
     }
 
-    &--mountain-bell {
+    /*&--mountain-bell {
       margin-left: 40px;
     }
 
@@ -823,7 +828,7 @@
 
     &--red-cliffs {
       margin-left: 37px;
-    }
+    }*/
   }
 
   .feedback__input {
