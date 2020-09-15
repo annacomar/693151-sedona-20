@@ -46,6 +46,7 @@
 
   &--name-surname-patronymic {
     border-bottom: solid $white-greyish 1px;
+    padding-bottom: 0;
   }
 
   &--contact-information {
@@ -81,8 +82,8 @@
   }
 
   &--contact-information {
-    margin-bottom: 25px;
-    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 16px;
   }
 
   &--your-impressions {
@@ -215,12 +216,25 @@
     flex-grow: initial;
     margin-top: -10px;
     margin-bottom: 16px;
+    padding-left: 22px;
+    margin-right: 20px;
+  }
+
+  &--name {
+    width: 230px;
+  }
+
+  &--surname {
+    width: 192px;
+  }
+
+  &--patronymic {
+    width: 194px;
   }
 
   &--grey {
     height: 58px;
     background-color: $white-greyish;
-    padding-left: 22px;
   }
 
   &--email,
@@ -394,10 +408,11 @@
     &--checkbox {
       flex-direction: row;
       flex-wrap: wrap;
+      padding-left: 95px;
     }
 
     &--checkbox li {
-      width: 50%;
+      width: 220px;
     }
   }
 
@@ -411,13 +426,14 @@
 
     &--name-surname-patronymic {
       order: 2;
-      width: 50%;
-      padding-left: 20px;
+      width: 320px;
+      padding-left: 40px;
+      margin-bottom: 30px;
     }
 
     &--your-impressions {
       order: 1;
-      width: 50%;
+      width: 320px;
       position: relative;
 
       &::after {
@@ -435,7 +451,7 @@
     &--contact-information {
       order: 3;
       width: 648px;
-      margin-bottom: 29px;
+      margin-bottom: 35px;
     }
 
     &--sightseengs-visited {
@@ -457,6 +473,18 @@
   .feedback__input {
     &--describe-more {
       width: 648px;
+    }
+
+    &--name {
+      width: 216px;
+    }
+
+    &--surname {
+      width: 178px;
+    }
+
+    &--patronymic {
+      width: 180px;
     }
   }
 
@@ -486,8 +514,7 @@
 
     &--contact-information {
       position: relative;
-      margin: 0 auto;
-      margin-bottom: 8px;
+      margin: 0 auto 25px;
       text-align: center;
       width: 297px;
 
@@ -516,8 +543,7 @@
 
     &--sightseengs-visited {
       position: relative;
-      margin: 0 auto;
-      margin-bottom: 48px;
+      margin: 0 auto 48px;
       text-align: center;
       width: 278px;
 
@@ -546,8 +572,7 @@
 
     &--your-emotions {
       position: relative;
-      margin: 0 auto;
-      margin-bottom: 60px;
+      margin: 0 auto 60px;
       text-align: center;
       width: 280px;
 
@@ -597,13 +622,12 @@
 
     &--devils-bridge,
     &--slide-park {
-      margin-left: 137px;
       margin-top: 15px;
     }
 
     &--mountain-bell,
     &--red-cliffs {
-      margin-left: 70px;
+      //margin-left: 70px;
     }
   }
 
@@ -618,19 +642,39 @@
   .feedback__button {
     width: 324px;
     order: 6;
-    text-align: left;
-    padding: 21px 60px 21px 50px;
+    padding: 17px 60px 17px 50px;
   }
 
   .feedback__legend {
     position: absolute;
     left: 75%;
-    top: 93.5%;
+    top: 93.7%;
   }
 
   .feedback__tel-email-wrapper {
     &--tel {
       margin-bottom: 2px;
+    }
+  }
+
+  .feedback__wrapper {
+    &--mountain-bell,
+    &--red-cliffs {
+      margin-left: 37px;
+    }
+
+    &--devils-bridge {
+      margin-top: -4px;
+      margin-left: 2px;
+    }
+
+    &--slide-park {
+      margin-top: 3px;
+      margin-left: 3px;
+    }
+
+    &--red-cliffs {
+      margin-top: 5px;
     }
   }
 }
@@ -652,18 +696,24 @@
 
     &--your-impressions {
       order: 1;
+      margin-left: 2px;
+
+      &::after {
+        left: -50%;
+      }
     }
 
     &--name-surname-patronymic {
-      padding-left: 78px;
-      margin-bottom: 20px;
+      margin-left: 175px;
+      padding-left: 40px;
+      margin-bottom: 18px;
     }
 
     &--sightseengs-visited {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     &--your-emotions {
@@ -671,8 +721,8 @@
     }
 
     &--contact-information {
-      margin-left: -19px;
-      margin-bottom: -23px;
+      margin-left: -12px;
+      margin-bottom: -15px;
     }
   }
 
@@ -685,13 +735,12 @@
     color: $darkblack;
 
     &--your-impressions {
-      margin-bottom: 45px;
+      margin-bottom: 60px;
       margin-left: 73px;
     }
 
     &--contact-information {
-      margin: 0 auto;
-      margin-bottom: 65px;
+      margin: 0 auto 60px;
       padding-top: 33px;
       width: 279px;
       text-align: center;
@@ -708,18 +757,19 @@
     }
 
     &--sightseengs-visited {
-      margin: 0 auto;
-      margin-bottom: 50px;
+      margin: 0 auto 50px;
       width: 278px;
       text-align: center;
 
       &::before {
         width: 280px;
+        top: 53%;
         left: -120%;
       }
 
       &::after {
         width: 280px;
+        top: 53%;
         right: -120%;
       }
     }
@@ -727,8 +777,7 @@
     &--your-emotions {
       text-align: center;
       width: 280px;
-      margin: 0 auto;
-      margin-bottom: 60px;
+      margin: 0 auto 57px;
 
       &::before {
         width: 280px;
@@ -747,14 +796,18 @@
   }
 
   .feedback__list {
+    &--checkbox {
+      padding: 0;
+    }
+
     &--checkbox li {
-      width: 25%;
+      width: 235px;
     }
   }
 
   .feedback__label {
     &--positive-impression {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     &--tel {
@@ -763,6 +816,7 @@
 
     &--email {
       width: 147px;
+      margin-top: 15px;
     }
 
     &--devils-bridge,
@@ -772,16 +826,20 @@
       margin: 5px 0 0 40px;
     }
 
+    &--devils-bridge {
+      margin-top: 10px;
+    }
+
     &--mountain-bell {
-      margin-left: 60px;
+      margin-left: 39px;
     }
 
     &--slide-park {
-      margin-left: 80px;
+      margin-left: 39px;
     }
 
     &--red-cliffs {
-      margin-left: 73px;
+      margin-left: 39px;
     }
   }
 
@@ -815,6 +873,27 @@
     &--contacts {
       flex-direction: row;
       align-items: center;
+      margin-left: -10px;
+    }
+
+    &--devils-bridge,
+    &--mountain-bell,
+    &--red-cliffs,
+    &--slide-park {
+      margin-left: 0;
+    }
+
+    &--mountain-bell {
+      margin-left: 20px;
+    }
+
+    &--slide-park {
+      margin-left: 20px;
+      margin-right: -20px;
+    }
+
+    &--red-cliffs {
+      margin-left: 0;
     }
   }
 
@@ -847,5 +926,6 @@
 
   .feedback__legend {
     left: 83%;
+    top: 93%;
   }
 }
