@@ -64,6 +64,10 @@
     padding-bottom: 24px;
     border-bottom: solid $white-greyish 1px;
   }
+
+  &--your-emotions {
+    margin-bottom: 5px;
+  }
 }
 
 .feedback__title {
@@ -87,7 +91,7 @@
   }
 
   &--your-impressions {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 
   &--sightseengs-visited {
@@ -96,8 +100,8 @@
   }
 
   &--your-emotions {
-    margin-bottom: 21px;
-    padding-top: 20px;
+    margin-bottom: 17px;
+    padding-top: 17px;
   }
 }
 
@@ -144,13 +148,14 @@
   }
 
   &--devils-bridge {
-    margin-top: 0;
+    margin-top: 10px;
     margin-left: 40px;
+    margin-bottom: 17px;
   }
 
   &--mountain-bell {
     margin-left: 40px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
   }
 
   &--slide-park {
@@ -394,7 +399,7 @@
 
 @media (min-width: $tablet-width) {
   .feedback {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -461,6 +466,7 @@
       width: 648px;
       flex-wrap: wrap;
       flex-direction: row;
+      margin-bottom: 43px;
     }
 
     &--your-emotions {
@@ -487,6 +493,26 @@
 
     &--patronymic {
       width: 180px;
+    }
+
+    &--devils-bridge:checked + label::after {
+      top: 40%;
+      left: 17px;
+    }
+
+    &--slide-park:checked + label::after {
+      top: 67%;
+      left: 15px;
+    }
+
+    &--mountain-bell:checked + label::after {
+      top: 37%;
+      left: 16px;
+    }
+
+    &--red-cliffs:checked + label::after {
+      top: 67%;
+      left: 15px;
     }
   }
 
@@ -552,7 +578,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: 70%;
+        top: 48%;
         left: -67%;
         width: 123px;
         height: 1px;
@@ -563,7 +589,7 @@
       &::after {
         content: "";
         position: absolute;
-        top: 70%;
+        top: 48%;
         right: -67%;
         width: 123px;
         height: 1px;
@@ -623,7 +649,36 @@
     }
 
     &--devils-bridge {
+      margin-top: 10px;
       margin-left: 40px;
+      margin-bottom: 26px;
+
+      &::before {
+        top: 38%;
+      }
+    }
+
+    &--mountain-bell {
+      margin-top: 5px;
+      margin-bottom: 0;
+
+      &::before {
+        top: 36%;
+      }
+    }
+
+    &--slide-park {
+      margin-bottom: 0;
+
+      &::before {
+        top: 56%;
+      }
+    }
+
+    &--red-cliffs {
+      &::before {
+        top: 56%;
+      }
     }
   }
 
@@ -665,12 +720,7 @@
     }
 
     &--slide-park {
-      margin-top: 3px;
       margin-left: 3px;
-    }
-
-    &--red-cliffs {
-      margin-top: 5px;
     }
   }
 }
@@ -702,14 +752,14 @@
     &--name-surname-patronymic {
       margin-left: 175px;
       padding-left: 40px;
-      margin-bottom: 18px;
+      margin-bottom: 4px;
     }
 
     &--sightseengs-visited {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 15px;
     }
 
     &--your-emotions {
@@ -787,7 +837,8 @@
     }
 
     &--name-surname-patronymic {
-      margin-bottom: 55px;
+      margin-bottom: 67px;
+      margin-left: 20px;
     }
   }
 
@@ -797,7 +848,7 @@
     }
 
     &--checkbox li {
-      width: 234px;
+      width: 25%;
       min-height: 50px;
       display: flex;
       align-items: center;
@@ -806,6 +857,7 @@
 
   .feedback__label {
     &--positive-impression {
+      margin-top: 11px;
       margin-bottom: 25px;
     }
 
@@ -818,17 +870,52 @@
       margin-top: 15px;
     }
 
-    /*&--mountain-bell {
-      margin-left: 40px;
+    &--dont-know-impression,
+    &--mountain-bell,
+    &--negative-impression,
+    &--red-cliffs,
+    &--slide-park {
+      margin-top: 0;
+    }
+
+    &--negative-impression {
+      margin-top: 8px;
+    }
+
+    &--dont-know-impression {
+      margin-top: 12px;
+    }
+
+    &--devils-bridge {
+      margin-top: 10px;
+    }
+
+    &--mountain-bell {
+      margin-top: -14px;
+
+      &::before {
+        left: 8%;
+      }
     }
 
     &--slide-park {
-      margin-left: 39px;
+      margin-top: -14px;
+
+      &::before {
+        left: 16%;
+        top: 27%;
+      }
     }
 
     &--red-cliffs {
-      margin-left: 37px;
-    }*/
+      margin-top: -21px;
+      margin-left: 40px;
+
+      &::before {
+        left: 15%;
+        top: 27%;
+      }
+    }
   }
 
   .feedback__input {
@@ -855,6 +942,21 @@
     &--tel {
       width: 257px;
     }
+
+    &--mountain-bell:checked + label::after {
+      top: 37%;
+      left: 15%;
+    }
+
+    &--slide-park:checked + label::after {
+      top: 37%;
+      left: 22%;
+    }
+
+    &--red-cliffs:checked + label::after {
+      top: 37%;
+      left: 22%;
+    }
   }
 
   .feedback__wrapper {
@@ -871,7 +973,16 @@
       margin-left: 0;
     }
 
+    &--mountain-bell {
+      padding-left: 23px;
+    }
+
+    &--slide-park {
+      padding-left: 40px;
+    }
+
     &--red-cliffs {
+      padding-left: 25px;
       margin-left: 0;
     }
   }
