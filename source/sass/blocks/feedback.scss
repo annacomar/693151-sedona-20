@@ -801,7 +801,7 @@
     }
 
     &--checkbox li {
-      width: 235px;
+      width: 234px;
     }
   }
 
@@ -831,7 +831,7 @@
     }
 
     &--mountain-bell {
-      margin-left: 39px;
+      margin-left: 40px;
     }
 
     &--slide-park {
@@ -839,7 +839,7 @@
     }
 
     &--red-cliffs {
-      margin-left: 39px;
+      margin-left: 37px;
     }
   }
 
@@ -884,12 +884,12 @@
     }
 
     &--mountain-bell {
-      margin-left: 20px;
+      margin-left: 25px;
     }
 
     &--slide-park {
-      margin-left: 20px;
-      margin-right: -20px;
+      margin-left: 25px;
+      margin-right: -30px;
     }
 
     &--red-cliffs {
@@ -910,10 +910,11 @@
 
   .feedback__icon-wrapper {
     top: 0;
-    left: 75.5%;
+    left: 73.5%;
 
     &--email {
-      left: 92%;
+      top: 3px;
+      left: 90%;
     }
   }
 
